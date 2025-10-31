@@ -1,0 +1,84 @@
+// -----------------------------
+// VARIABLES
+// -----------------------------
+
+// - Font & Typography
+// -----------------------------
+$font-stack: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+  "Helvetica Neue", sans-serif;
+$base-line-height: 1.5;
+$base-font-weight: 400;
+
+// - Rendering
+// -----------------------------
+$base-font-synthesis: none;
+$base-text-rendering: optimizeLegibility;
+$webkit-font-smoothing: antialiased;
+$moz-osx-font-smoothing: grayscale;
+
+// - Buttons & Links
+// -----------------------------
+$btn-radius: 0.5rem;
+$btn-border: 1px solid transparent;
+$btn-padding: 0.6rem 1.2rem;
+$btn-font-size: 1rem;
+$btn-font-weight: 500;
+
+// - Global Colors
+// -----------------------------
+$gray-50: #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+$gray-900: #111827;
+$gray-950: #030712;
+
+// - Light Mode Colors
+// -----------------------------
+$light-primary: #104e73;
+$light-secondary: #0082c9;
+$light-accent: #2ecfd8;
+$light-success: #0e8b4f;
+$light-success-bg: #e6f7ef;
+$light-warning: #d97706;
+$light-warning-bg: #fef3e6;
+$light-error: #dc2626;
+$light-error-bg: #fef2f2;
+$light-info: #0082c9;
+$light-info-bg: #eff6ff;
+$light-background: #f1f1f1;
+$light-foreground: #111827;
+$light-border: #e5e7eb;
+$light-input-bg: #ffffff;
+$light-input-border: #d1d5db;
+$light-input-focus: #0082c9;
+$light-hover-bg: #f3f4f6;
+$light-active-bg: #e5e7eb;
+
+// - Dark Mode Colors
+// -----------------------------
+$dark-primary: #2685c3;
+$dark-secondary: #1a9dd9;
+$dark-accent: #52dae0;
+$dark-success: #10a85f;
+$dark-success-bg: #064e3b;
+$dark-warning: #f59e0b;
+$dark-warning-bg: #78350f;
+$dark-error: #ef4444;
+$dark-error-bg: #7f1d1d;
+$dark-info: #1a9dd9;
+$dark-info-bg: #0c4a6e;
+$dark-background: #0a0a0a;
+$dark-foreground: #f9fafb;
+$dark-border: #374151;
+$dark-input-bg: #1f2937;
+$dark-input-border: #4b5563;
+$dark-input-focus: #1a9dd9;
+$dark-hover-bg: #1f2937;
+$dark-active-bg: #374151;

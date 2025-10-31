@@ -1,0 +1,26 @@
+// --------------------------
+// BASE
+// --------------------------
+@use "../abstracts" as *;
+
+:root {
+  @include root-styles;
+}
+
+body {
+  font-family: $font-stack;
+  color: light-dark($light-foreground, $dark-foreground);
+  background: light-dark($light-background, $dark-background);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  @include responsive-container;
+}

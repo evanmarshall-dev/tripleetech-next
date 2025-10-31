@@ -1,0 +1,21 @@
+// -----------------------------
+// FUNCTIONS
+// -----------------------------
+@use "sass:math";
+@use "variables" as *;
+
+// - REM Conversion Function
+// - Example: to-rem(32px) => 2rem
+// -----------------------------
+@function to-rem($value, $base: 16px) {
+  @if math.is-unitless($value) {
+    @return math.div($value, math.div($base, 1px)) * 1rem;
+  }
+
+  @if math.unit($value) == "px" {
+    @return math.div($value, $base) * 1rem;
+  }
+
+  // already in rem/em/% or other length - return unchanged
+  @return $value;
+}

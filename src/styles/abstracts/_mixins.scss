@@ -1,0 +1,67 @@
+// -----------------------------
+// MIXINS
+// -----------------------------
+@use "variables" as *;
+@use "functions" as *;
+
+// - Focus Ring Mixin
+// - Example: @include focus-ring;
+// -----------------------------
+@mixin focus-ring($width: 2px, $offset: 2px) {
+  &:focus-visible {
+    outline: $width solid currentColor;
+    outline-offset: $offset;
+  }
+}
+
+// - Responsive Container Mixin
+// - Example: @include responsive-container;
+// -----------------------------
+@mixin responsive-container(
+  $min: 20rem,
+  $preferred-vw: 90vw,
+  $max: 80rem,
+  $pad-block-min: 1rem,
+  $pad-block-vw: 4vw,
+  $pad-block-max: 3rem,
+  $pad-inline-min: 1rem,
+  $pad-inline-vw: 5vw,
+  $pad-inline-max: 2rem,
+  $container-name: main-container
+) {
+  width: 100%;
+  max-width: clamp($min, $preferred-vw, $max);
+  margin-inline: auto;
+  padding-block: clamp($pad-block-min, $pad-block-vw, $pad-block-max);
+  padding-inline: clamp($pad-inline-min, $pad-inline-vw, $pad-inline-max);
+  container-type: inline-size;
+  container-name: $container-name;
+  text-align: center;
+}
+
+// - Root Base Mixin
+// - Example: @include root-base;
+// -----------------------------
+@mixin root-styles {
+  display: block;
+  font-size: to-rem(16px);
+  color-scheme: light dark;
+  font-synthesis: $base-font-synthesis;
+  text-rendering: $base-text-rendering;
+  -webkit-font-smoothing: $webkit-font-smoothing;
+  -moz-osx-font-smoothing: $moz-osx-font-smoothing;
+}
+
+// - Button Base Mixin
+// - Example: @include btn-base;
+// -----------------------------
+@mixin btn-base {
+  border-radius: $btn-radius;
+  border: $btn-border;
+  padding: $btn-padding;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
