@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
@@ -35,7 +36,12 @@ const NavBar = () => {
         <div className={styles.navContent}>
           {/* Brand/Logo */}
           <Link href='/' className={styles.brand}>
-            Triple E Technology
+            <Image
+              src='/icons/logo-sm.svg'
+              alt='Triple E Technology Solutions logo. Small blue cube with letter E on all sides.'
+              width={120}
+              height={40}
+            />
           </Link>
 
           {/* Desktop Navigation Links */}

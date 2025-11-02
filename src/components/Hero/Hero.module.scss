@@ -1,0 +1,240 @@
+// --------------------------
+// HERO COMPONENT
+// --------------------------
+@use "../../styles/abstracts" as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+
+  // Mobile-first: adjust height for different screens
+  @media (width >= 768px) {
+    min-height: 500px;
+  }
+
+  @media (width >= 1024px) {
+    min-height: 600px;
+  }
+
+  @media (width >= 1440px) {
+    min-height: 700px;
+  }
+}
+
+.heroContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.imageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 1;
+
+  // Darker overlay for mobile for better readability
+  @media (width <= 768px) {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  min-height: inherit;
+  padding: 2rem 1rem;
+
+  @media (width >= 768px) {
+    padding: 3rem 2rem;
+  }
+
+  @media (width >= 1024px) {
+    padding: 4rem 3rem;
+  }
+
+  @media (width >= 1440px) {
+    padding: 5rem 4rem;
+  }
+}
+
+.textContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  color: white;
+
+  @media (width >= 768px) {
+    max-width: 700px;
+    margin: 0;
+  }
+
+  @media (width >= 1024px) {
+    max-width: 800px;
+  }
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: light-dark($light-accent, $dark-accent);
+  margin: 0 0 1rem 0;
+
+  @media (width >= 768px) {
+    font-size: 0.875rem;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+.heading {
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem 0;
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  @media (width >= 768px) {
+    margin: 0 0 1.5rem 0;
+  }
+
+  @media (width >= 1024px) {
+    margin: 0 0 2rem 0;
+  }
+}
+
+.subheading {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+
+  @media (width >= 768px) {
+    margin: 0 0 2.5rem 0;
+  }
+
+  @media (width >= 1024px) {
+    margin: 0 0 3rem 0;
+  }
+}
+
+.ctaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (width >= 480px) {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.primaryCta,
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  @include focus-ring;
+
+  @media (width >= 768px) {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+  }
+}
+
+.primaryCta {
+  background: light-dark($light-secondary, $dark-secondary);
+  color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background: light-dark(
+      darken($light-secondary, 10%),
+      lighten($dark-secondary, 10%)
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.secondaryCta {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Reduced motion support for accessibility
+@media (prefers-reduced-motion: reduce) {
+  .primaryCta,
+  .secondaryCta {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+
+    &:active {
+      transform: none;
+    }
+  }
+}

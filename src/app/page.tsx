@@ -1,14 +1,12 @@
 import NavBar from "@/components/NavBar/NavBar";
+import Hero from "@/components/Hero/Hero";
 
 const Home = () => {
   return (
     <>
       <NavBar />
-      <main>
-        <div>
-          <h1>Triple E Technology</h1>
-        </div>
-      </main>
+      <Hero />
+      <main>{/* Additional page content will go here */}</main>
     </>
   );
 };
