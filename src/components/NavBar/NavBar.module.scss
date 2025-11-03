@@ -67,10 +67,11 @@
 .mainNav {
   background: light-dark(white, $dark-input-bg);
   border-bottom: 1px solid light-dark($light-border, $dark-border);
-  padding: 0 1rem;
+  padding: 1rem;
+  position: relative;
 
   @media (width >= 768px) {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -78,32 +79,80 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   min-height: 4rem;
   gap: 2rem;
 
-  @media (width >= 768px) {
+  @media (width >= 1140px) {
+    justify-content: space-between;
     min-height: 5rem;
   }
 }
 
 .brand {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: light-dark($light-primary, $dark-primary);
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.2s ease;
 
-  &:hover {
-    color: light-dark($light-secondary, $dark-secondary);
-  }
-
   @include focus-ring;
+}
 
-  @media (width >= 768px) {
-    font-size: 1.5rem;
+.logoWrapper {
+  display: none;
+
+  @media (width >= 1140px) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.mobileLogoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (width >= 1140px) {
+    display: none;
+  }
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.brandName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: $gray-50;
+  line-height: 1.2;
+  transition: color 0.2s ease;
+
+  .brand:hover & {
+    color: $gray-300;
+  }
+}
+
+.brandTagline {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: light-dark($light-secondary, $dark-secondary);
+  line-height: 1.2;
+}
+
+.mobileBrandName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $gray-50;
+  text-align: center;
+  transition: color 0.2s ease;
+
+  .brand:hover & {
+    color: $gray-300;
   }
 }
 
@@ -114,7 +163,7 @@
   padding: 0;
   gap: 0.5rem;
 
-  @media (width >= 1024px) {
+  @media (width >= 1140px) {
     display: flex;
     gap: 0.75rem;
   }
@@ -129,7 +178,7 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 4px;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -140,6 +189,10 @@
   }
 
   @include focus-ring;
+
+  @media (width >= 1200px) {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .mobileMenuButton {
@@ -153,6 +206,10 @@
   padding: 0.5rem;
   font-size: 1.5rem;
   transition: color 0.2s ease;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 
   &:hover {
     color: light-dark($light-primary, $dark-primary);
@@ -160,7 +217,7 @@
 
   @include focus-ring;
 
-  @media (width >= 1024px) {
+  @media (width >= 1140px) {
     display: none;
   }
 }
@@ -172,7 +229,7 @@
   border-bottom: 1px solid light-dark($light-border, $dark-border);
   padding: 1rem;
 
-  @media (width >= 1024px) {
+  @media (width >= 1140px) {
     display: none;
   }
 }

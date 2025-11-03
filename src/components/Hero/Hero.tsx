@@ -12,7 +12,7 @@ const Hero = () => {
         <div className={styles.imageWrapper}>
           <Image
             src='/images/hero-xl.png'
-            alt=''
+            alt='Triple E Tech: Blue and green abstract technology background with electrical current patterns'
             fill
             priority
             quality={90}
@@ -44,6 +44,7 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons */}
+            {/* TODO: Make sure the corresponding pages/routes match the link once created. */}
             <div className={styles.ctaGroup}>
               <Link href='/contact' className={styles.primaryCta}>
                 Get Started

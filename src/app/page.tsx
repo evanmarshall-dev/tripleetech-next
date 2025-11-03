@@ -1,12 +1,17 @@
 import NavBar from "@/components/NavBar/NavBar";
 import Hero from "@/components/Hero/Hero";
+import WaveDivider from "@/components/WaveDivider/WaveDivider";
+import ServiceHighlight from "@/components/ServiceHighlight/ServiceHighlight";
 
 const Home = () => {
   return (
     <>
       <NavBar />
       <Hero />
-      <main>{/* Additional page content will go here */}</main>
+      <WaveDivider />
+      <main>
+        <ServiceHighlight />
+      </main>
     </>
   );
 };

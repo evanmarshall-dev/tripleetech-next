@@ -2,6 +2,7 @@
 // FUNCTIONS
 // -----------------------------
 @use "sass:math";
+@use "sass:color";
 @use "variables" as *;
 
 // - REM Conversion Function
@@ -18,4 +19,12 @@
 
   // already in rem/em/% or other length - return unchanged
   @return $value;
+}
+
+// - Scale Color Function
+// - Wrapper for sass:color.scale()
+// - Example: scale-color($light-primary, $lightness: 10%)
+// -----------------------------
+@function scale-color($color, $args...) {
+  @return color.scale($color, $args...);
 }

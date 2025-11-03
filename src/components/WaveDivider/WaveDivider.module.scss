@@ -1,0 +1,49 @@
+// --------------------------
+// WAVE DIVIDER COMPONENT
+// --------------------------
+@use "../../styles/abstracts" as *;
+
+.waveDivider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: -40px; // Overlay the hero section slightly more to hide the gap
+  z-index: 10; // Ensure it's above the hero
+
+  // Adjust height for different screens
+  height: 60px;
+
+  @media (width >= 768px) {
+    height: 80px;
+    margin-top: -50px;
+  }
+
+  @media (width >= 1024px) {
+    height: 100px;
+    margin-top: -70px;
+  }
+
+  @media (width >= 1440px) {
+    height: 120px;
+    margin-top: -80px;
+  }
+}
+
+.wave {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
+}
+
+.waveBorder {
+  fill: light-dark(
+    scale-color($light-accent, $lightness: 50%),
+    scale-color($dark-accent, $lightness: -50%)
+  );
+}
+
+.waveFill {
+  fill: light-dark(white, $dark-background);
+}
