@@ -7,7 +7,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background: light-dark($light-background, $dark-background);
+  background: var(--color-background);
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -17,8 +17,8 @@
 }
 
 .utilityBar {
-  background: light-dark($light-primary, $dark-primary);
-  color: light-dark(white, $dark-foreground);
+  background: var(--color-primary);
+  color: #ffffff;
   padding: 0.5rem 1rem;
 
   @media (width >= 768px) {
@@ -65,8 +65,8 @@
 }
 
 .mainNav {
-  background: light-dark(white, $dark-input-bg);
-  border-bottom: 1px solid light-dark($light-border, $dark-border);
+  background: var(--color-input-bg);
+  border-bottom: 1px solid var(--color-border);
   padding: 1rem;
   position: relative;
 
@@ -128,19 +128,19 @@
 .brandName {
   font-size: 1.125rem;
   font-weight: 700;
-  color: $gray-50;
+  color: var(--color-foreground);
   line-height: 1.2;
   transition: color 0.2s ease;
 
   .brand:hover & {
-    color: $gray-300;
+    color: var(--color-foreground-hover);
   }
 }
 
 .brandTagline {
   font-size: 0.875rem;
   font-weight: 500;
-  color: light-dark($light-secondary, $dark-secondary);
+  color: var(--color-secondary);
   line-height: 1.2;
 }
 
@@ -174,7 +174,7 @@
 }
 
 .navLink {
-  color: light-dark($light-foreground, $dark-foreground);
+  color: var(--color-foreground);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
@@ -184,8 +184,8 @@
   white-space: nowrap;
 
   &:hover {
-    background: light-dark($light-hover-bg, $dark-hover-bg);
-    color: light-dark($light-primary, $dark-primary);
+    background: var(--color-hover-bg);
+    color: var(--color-primary);
   }
 
   @include focus-ring;
@@ -201,7 +201,7 @@
   justify-content: center;
   background: transparent;
   border: none;
-  color: light-dark($light-foreground, $dark-foreground);
+  color: var(--color-foreground);
   cursor: pointer;
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -212,7 +212,7 @@
   transform: translateY(-50%);
 
   &:hover {
-    color: light-dark($light-primary, $dark-primary);
+    color: var(--color-primary);
   }
 
   @include focus-ring;
@@ -225,8 +225,8 @@
 .mobileMenu {
   display: flex;
   flex-direction: column;
-  background: light-dark(white, $dark-input-bg);
-  border-bottom: 1px solid light-dark($light-border, $dark-border);
+  background: var(--color-input-bg);
+  border-bottom: 1px solid var(--color-border);
   padding: 1rem;
 
   @media (width >= 1140px) {
@@ -244,7 +244,7 @@
 }
 
 .mobileNavLink {
-  color: light-dark($light-foreground, $dark-foreground);
+  color: var(--color-foreground);
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -254,8 +254,8 @@
   display: block;
 
   &:hover {
-    background: light-dark($light-hover-bg, $dark-hover-bg);
-    color: light-dark($light-primary, $dark-primary);
+    background: var(--color-hover-bg);
+    color: var(--color-primary);
   }
 
   @include focus-ring;

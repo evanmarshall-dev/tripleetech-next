@@ -1,0 +1,71 @@
+@use "@/styles/abstracts" as *;
+
+.widget {
+  position: fixed;
+  bottom: to-rem(24px);
+  right: to-rem(24px);
+  display: flex;
+  flex-direction: column;
+  gap: to-rem(12px);
+  z-index: 1000;
+
+  @media (width >= 600px) {
+    bottom: to-rem(32px);
+    right: to-rem(32px);
+    gap: to-rem(16px);
+  }
+}
+
+.backToTop,
+.themeButton {
+  @include btn-base;
+
+  width: to-rem(48px);
+  height: to-rem(48px);
+  border-radius: 50%;
+  border: none;
+  // background: light-dark($light-primary, $dark-primary);
+  // color: light-dark(#ffffff, $dark-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 to-rem(4px) to-rem(12px) rgba(0, 0, 0, 0.15);
+  // transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  @media (width >= 600px) {
+    width: to-rem(56px);
+    height: to-rem(56px);
+  }
+
+  &:hover {
+    // background: light-dark($light-secondary, $dark-secondary);
+    transform: translateY(to-rem(-2px));
+    box-shadow: 0 to-rem(6px) to-rem(16px) rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 to-rem(2px) to-rem(8px) rgba(0, 0, 0, 0.15);
+  }
+
+  @include focus-ring(to-rem(3px), to-rem(2px));
+
+  // &:focus-visible {
+  //   outline-color: light-dark($light-accent, $dark-accent);
+  // }
+}
+
+.backToTop {
+  animation: fadeInScale 0.3s ease forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

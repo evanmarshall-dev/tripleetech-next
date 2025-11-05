@@ -38,12 +38,9 @@
 }
 
 .waveBorder {
-  fill: light-dark(
-    scale-color($light-accent, $lightness: 50%),
-    scale-color($dark-accent, $lightness: -50%)
-  );
+  fill: var(--color-accent);
 }
 
 .waveFill {
-  fill: light-dark(white, $dark-background);
+  fill: var(--color-background);
 }

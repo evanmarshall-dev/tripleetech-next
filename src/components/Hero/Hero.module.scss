@@ -109,7 +109,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: light-dark($light-accent, $dark-accent);
+  color: var(--color-accent);
   margin: 0 0 1rem 0;
 
   @media (width >= 768px) {
@@ -186,16 +186,13 @@
 }
 
 .primaryCta {
-  background: light-dark($light-secondary, $dark-secondary);
+  background: var(--color-secondary);
   color: white;
   border: 2px solid transparent;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background: light-dark(
-      scale-color($light-secondary, $lightness: 10%),
-      scale-color($dark-secondary, $lightness: 10%)
-    );
+    // background: color-mix(in srgb, var(--color-secondary) 90%, white 10%);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }

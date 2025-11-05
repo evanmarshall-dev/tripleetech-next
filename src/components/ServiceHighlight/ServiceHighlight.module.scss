@@ -4,7 +4,7 @@
 @use "../../styles/abstracts" as *;
 
 .serviceHighlight {
-  background: light-dark(white, $dark-background);
+  background: var(--color-background);
   padding: 2rem 0;
   width: 100%;
 }
@@ -26,14 +26,14 @@
 .title {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
-  color: light-dark($light-foreground, $dark-foreground);
+  color: var(--color-foreground);
   margin: 0 0 1rem 0;
   line-height: 1.2;
 }
 
 .subtitle {
   font-size: clamp(1rem, 2vw, 1.125rem);
-  color: light-dark($light-foreground, $dark-foreground);
+  color: var(--color-foreground);
   opacity: 0.8;
   margin: 0;
   max-width: 600px;
@@ -55,8 +55,8 @@
 }
 
 .serviceHighlightCard {
-  background: light-dark($light-input-bg, $dark-input-bg);
-  border: 1px solid light-dark($light-border, $dark-border);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -67,7 +67,7 @@
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-color: light-dark($light-accent, $dark-accent);
+    border-color: var(--color-accent);
   }
 
   @media (width >= 768px) {
@@ -86,7 +86,7 @@
 .category {
   display: inline-block;
   padding: 0.375rem 0.875rem;
-  background: light-dark($light-accent, $dark-accent);
+  background: var(--color-accent);
   color: white;
   font-size: 0.75rem;
   font-weight: 600;
@@ -104,7 +104,7 @@
 .serviceHighlightTitle {
   font-size: 1.25rem;
   font-weight: 700;
-  color: light-dark($light-foreground, $dark-foreground);
+  color: var(--color-foreground);
   margin: 0;
   line-height: 1.3;
   text-align: initial;
@@ -116,7 +116,7 @@
 
 .serviceHighlightDescription {
   font-size: 0.9375rem;
-  color: light-dark($light-foreground, $dark-foreground);
+  color: var(--color-foreground);
   opacity: 0.85;
   line-height: 1.6;
   margin: 0;
@@ -127,7 +127,7 @@
 .readMore {
   display: inline-flex;
   align-items: center;
-  color: light-dark($light-primary, $dark-primary);
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9375rem;
@@ -135,7 +135,7 @@
   gap: 0.5rem;
 
   &:hover {
-    color: light-dark($light-secondary, $dark-secondary);
+    color: var(--color-secondary);
     gap: 0.75rem;
   }
 

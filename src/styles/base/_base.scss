@@ -5,12 +5,44 @@
 
 :root {
   @include root-styles;
+
+  // CSS Custom Properties for theming
+  --color-primary: #{$light-primary};
+  --color-secondary: #{$light-secondary};
+  --color-accent: #{$light-accent};
+  --color-background: #{$light-background};
+  --color-foreground: #{$light-foreground};
+  --color-foreground-hover: #{$light-foreground-hover};
+  --color-border: #{$light-border};
+  --color-input-bg: #{$light-input-bg};
+  --color-input-border: #{$light-input-border};
+  --color-hover-bg: #{$light-hover-bg};
+  --color-active-bg: #{$light-active-bg};
+  --color-card-bg: #{$light-card-bg};
+}
+
+:root[style*="color-scheme: dark"] {
+  --color-primary: #{$dark-primary};
+  --color-secondary: #{$dark-secondary};
+  --color-accent: #{$dark-accent};
+  --color-background: #{$dark-background};
+  --color-foreground: #{$dark-foreground};
+  --color-foreground-hover: #{$dark-foreground-hover};
+  --color-border: #{$dark-border};
+  --color-input-bg: #{$dark-input-bg};
+  --color-input-border: #{$dark-input-border};
+  --color-hover-bg: #{$dark-hover-bg};
+  --color-card-bg: #{$dark-card-bg};
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: $font-stack;
-  color: light-dark($light-foreground, $dark-foreground);
-  background: light-dark($light-background, $dark-background);
+  color: var(--color-foreground);
+  background: var(--color-background);
   min-height: 100vh;
   min-height: 100dvh;
 }

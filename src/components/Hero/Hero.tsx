@@ -34,13 +34,14 @@ const Hero = () => {
 
             {/* Main Heading */}
             <h1 className={styles.heading}>
-              Powering Innovation Through Expert Technology Solutions
+              Empowering Businesses To Reach Their Potential Through Technology
+              Solutions
             </h1>
 
             {/* Subheading */}
             <p className={styles.subheading}>
-              Delivering enterprise-grade IT solutions that transform businesses
-              through innovation, security, and seamless integration
+              Building lasting partnerships through innovative technology,
+              reliable support, and solutions that help your business thrive.
             </p>
 
             {/* CTA Buttons */}
