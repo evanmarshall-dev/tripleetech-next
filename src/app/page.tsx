@@ -1,7 +1,7 @@
 import NavBar from "@/components/NavBar/NavBar";
 import Hero from "@/components/Hero/Hero";
 import WaveDivider from "@/components/WaveDivider/WaveDivider";
-import ServiceHighlight from "@/components/ServiceHighlight/ServiceHighlight";
+import ServiceSnippets from "@/components/ServiceSnippets/ServiceSnippets";
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
       <Hero />
       <WaveDivider />
       <main>
-        <ServiceHighlight />
+        <ServiceSnippets />
       </main>
     </>
   );
