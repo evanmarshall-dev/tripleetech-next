@@ -147,12 +147,12 @@
 .mobileBrandName {
   font-size: 0.875rem;
   font-weight: 600;
-  color: $gray-50;
+  color: var(--color-foreground);
   text-align: center;
   transition: color 0.2s ease;
 
   .brand:hover & {
-    color: $gray-300;
+    color: var(--color-foreground-hover);
   }
 }
 

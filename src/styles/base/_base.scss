@@ -53,6 +53,10 @@ body {
   margin: 0;
 }
 
-main {
+// main {
+//   @include responsive-container;
+// }
+
+.container {
   @include responsive-container;
 }
