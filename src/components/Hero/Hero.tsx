@@ -28,7 +28,7 @@ const Hero = () => {
         <div className={styles.contentWrapper}>
           <div className={styles.textContent}>
             {/* Eyebrow text */}
-            <p className={styles.eyebrow} aria-label='Category'>
+            <p className={styles.badge} aria-label='Category'>
               TECHNOLOGY SOLUTIONS
             </p>
 
