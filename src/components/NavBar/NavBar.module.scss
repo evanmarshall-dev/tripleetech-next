@@ -1,7 +1,7 @@
 // --------------------------
 // NAVBAR COMPONENT
 // --------------------------
-@use "../../styles/abstracts" as *;
+@use '../../styles/abstracts' as *;
 
 .navbar {
   position: sticky;
@@ -50,6 +50,7 @@
   transition: all 0.2s ease;
   border-radius: 4px;
   white-space: nowrap;
+  text-decoration: none;
 
   &:hover {
     background: rgba(255, 255, 255, 0.1);

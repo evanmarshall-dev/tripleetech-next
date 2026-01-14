@@ -1,0 +1,83 @@
+// --------------------------
+// LEGAL PAGES (Terms & Privacy)
+// --------------------------
+@use '../../styles/abstracts' as *;
+
+.legalPage {
+  background: var(--color-background);
+  padding: 6rem 0 4rem 0;
+  min-height: 100vh;
+
+  @media (width >= 768px) {
+    padding: 8rem 0 5rem 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 5vw, 2rem);
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.lastUpdated {
+  font-size: 0.875rem;
+  color: var(--color-foreground);
+  opacity: 0.6;
+  margin: 0 0 3rem 0;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-foreground);
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-accent);
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-foreground);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-foreground);
+    margin: 0 0 1rem 0;
+
+    strong {
+      color: var(--color-foreground);
+    }
+  }
+
+  ul {
+    margin: 0 0 1rem 0;
+    padding-left: 1.5rem;
+
+    li {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--color-foreground);
+      margin-bottom: 0.5rem;
+
+      &::marker {
+        color: var(--color-accent);
+      }
+    }
+  }
+}

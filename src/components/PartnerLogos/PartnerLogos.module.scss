@@ -1,0 +1,206 @@
+// --------------------------
+// PARTNER LOGOS COMPONENT
+// --------------------------
+@use '../../styles/abstracts' as *;
+
+.partnerLogos {
+  background: var(--color-background);
+  padding: 4rem 0;
+  width: 100%;
+  overflow: hidden;
+
+  @media (width >= 768px) {
+    padding: 5rem 0;
+  }
+
+  @media (width >= 1024px) {
+    padding: 6rem 0;
+  }
+}
+
+.container {
+  @include responsive-container;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  @media (width >= 768px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: var(--color-foreground);
+  opacity: 0.8;
+  margin: 0;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  @media (width >= 768px) {
+    gap: 3rem;
+  }
+
+  @media (width >= 1024px) {
+    gap: 4rem;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  @include focus-ring;
+
+  &:hover {
+    background: var(--color-hover-bg);
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (width >= 768px) {
+    padding: 1.25rem 2rem;
+  }
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  min-height: 40px;
+
+  @media (width >= 768px) {
+    min-width: 120px;
+    min-height: 48px;
+  }
+}
+
+.logo {
+  width: auto;
+  height: 32px;
+  max-width: 100px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+
+  .logoLink:hover & {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  @media (width >= 768px) {
+    height: 40px;
+    max-width: 120px;
+  }
+}
+
+// Reduced motion support for accessibility
+@media (prefers-reduced-motion: reduce) {
+  .carouselTrack {
+    animation: none;
+
+    // When motion is reduced, allow horizontal scrolling instead
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-border);
+      border-radius: 3px;
+    }
+  }
+
+  .logoLink {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .logo {
+    transition: none;
+  }
+}

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "./NavBar.module.scss";
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './NavBar.module.scss';
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,12 +14,13 @@ const NavBar = () => {
 
   // TODO: Make sure the links are correct once the pages/routes are created.
   const navItems = [
-    { label: "Products", href: "/products" },
-    { label: "Services", href: "/services" },
-    { label: "Support", href: "/support" },
-    { label: "Partners", href: "/partners" },
-    { label: "Company", href: "/company" },
-    { label: "Contact Us", href: "/contact" },
+    { label: 'Cybersecurity', href: '/cybersecurity' },
+    { label: 'Consulting Services', href: '/consulting-services' },
+    { label: 'Managed IT Services', href: '/managed-it-services' },
+    { label: 'Company', href: '/company' },
+    { label: 'Contact Us', href: '/contact' },
+    // { label: 'Support', href: '/support' },
+    // { label: "Partners", href: "/partners" },
   ];
 
   return (
@@ -27,8 +28,17 @@ const NavBar = () => {
       {/* Utility Bar */}
       <div className={styles.utilityBar}>
         <div className={styles.utilityContent}>
-          <button className={styles.utilityButton}>Remote Help</button>
-          <button className={styles.utilityButton}>Trouble Ticket</button>
+          <a
+            href='https://tripleesupport.screenconnect.com/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className={styles.utilityButton}
+          >
+            Remote Help
+          </a>
+          <a href='mailto:help@tripleetech.ca' className={styles.utilityButton}>
+            Trouble Ticket
+          </a>
         </div>
       </div>
 
@@ -80,8 +90,9 @@ const NavBar = () => {
             className={styles.mobileMenuButton}
             onClick={toggleMobileMenu}
             aria-label='Toggle mobile menu'
-            aria-expanded={isMobileMenuOpen}>
-            {isMobileMenuOpen ? "✕" : "☰"}
+            aria-expanded={isMobileMenuOpen}
+          >
+            {isMobileMenuOpen ? '✕' : '☰'}
           </button>
         </div>
       </div>
@@ -95,7 +106,8 @@ const NavBar = () => {
                 <Link
                   href={item.href}
                   className={styles.mobileNavLink}
-                  onClick={() => setIsMobileMenuOpen(false)}>
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   {item.label}
                 </Link>
               </li>
