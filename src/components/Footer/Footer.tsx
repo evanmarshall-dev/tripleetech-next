@@ -4,32 +4,21 @@ import styles from './Footer.module.scss';
 
 // Navigation structure for the footer
 const footerNavigation = {
-  cyberSecurity: {
-    title: 'Cybersecurity',
+  services: {
+    title: 'Products & Services',
     links: [
       {
         label: 'Cybersecurity Solutions',
         href: '/cybersecurity',
       },
-      //   { label: 'Endpoint Security', href: '/products/endpoint-security' },
-    ],
-  },
-  consultingServices: {
-    title: 'Consulting Services',
-    links: [
       {
-        label: 'Cybersecurity Consulting',
+        label: 'Consulting Services',
         href: '/consulting-services',
       },
-      //   { label: 'Security Assessments', href: '/services/assessments' },
-      //   { label: 'Incident Response', href: '/services/incident-response' },
-      //   { label: 'Training & Awareness', href: '/services/training' },
-    ],
-  },
-  managedITServices: {
-    title: 'Managed IT Services',
-    links: [
-      { label: 'Managed Detection & Response', href: '/managed-it-services' },
+      {
+        label: 'Managed IT Services',
+        href: '/managed-it-services',
+      },
     ],
   },
   support: {
