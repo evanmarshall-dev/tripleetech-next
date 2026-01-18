@@ -12,12 +12,16 @@ const footerNavigation = {
         href: '/cybersecurity',
       },
       {
+        label: 'Managed Detection & Response',
+        href: '/managed-detection-response',
+      },
+      {
         label: 'Consulting Services',
         href: '/consulting-services',
       },
       {
-        label: 'Managed IT Services',
-        href: '/managed-it-services',
+        label: 'Managed Service Provider',
+        href: '/managed-service-provider',
       },
     ],
   },
@@ -174,12 +178,13 @@ const Footer = () => {
             {/* Logo */}
             <div className={styles.bottomLogo}>
               <Link href='/' aria-label='Triple E Technology Solutions home'>
-                <Image
-                  src='/icons/logo-sm.svg'
-                  alt='Triple E Technology Solutions'
-                  width={100}
-                  height={33}
-                />
+                <div className={styles.logoContainer}>
+                  <Image
+                    src='/icons/logo-sm.svg'
+                    alt='Triple E Technology Solutions'
+                    fill
+                  />
+                </div>
               </Link>
             </div>
 

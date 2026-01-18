@@ -183,6 +183,21 @@
   }
 }
 
+.logoContainer {
+  position: relative;
+  width: 28px;
+  height: 28px;
+
+  @media (width >= 768px) {
+    width: 32px;
+    height: 32px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
 .bottomLogo {
   flex-shrink: 0;
 
@@ -195,11 +210,6 @@
     }
 
     @include focus-ring;
-  }
-
-  img {
-    display: block;
-    height: auto;
   }
 }
 

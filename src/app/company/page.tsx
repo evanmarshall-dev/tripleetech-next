@@ -59,7 +59,7 @@ const CompanyPage = () => {
     {
       title: 'Our Services',
       description: 'Explore our comprehensive IT solutions',
-      href: '/managed-it-services',
+      href: '/managed-service-provider',
       icon: '/icons/services-icon.svg',
     },
     {
@@ -391,7 +391,7 @@ const CompanyPage = () => {
               <Link href='/contact' className={styles.ctaPrimary}>
                 Contact Us Today
               </Link>
-              <Link href='/managed-it-services' className={styles.ctaSecondary}>
+              <Link href='/managed-service-provider' className={styles.ctaSecondary}>
                 View Our Services
               </Link>
             </div>

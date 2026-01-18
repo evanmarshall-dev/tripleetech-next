@@ -1,31 +1,31 @@
-import Image from "next/image";
-import styles from "./ServiceSnippets.module.scss";
+import Image from 'next/image';
+import styles from './ServiceSnippets.module.scss';
 
 const ServiceSnippets = () => {
   const serviceSnippetsItems = [
     {
       id: 1,
-      title: "Cybersecurity",
+      title: 'Cybersecurity',
       description:
         "Cybersecurity doesn't have to be overwhelming. At the heart of every strong defense is a secure foundation—one that protects your data, prepares your team, and puts the right tools in...",
       image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop&auto=format",
+        'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop&auto=format',
     },
     {
       id: 2,
-      title: "Consulting Services",
+      title: 'Consulting Services',
       description:
         "At Triple E Technology Solutions, we don't just fix problems—we help you build the right tech foundation to grow, thrive, and innovate. We partner with businesses to deliver efficient, effective IT solutions tailored to your...",
       image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop&auto=format",
+        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop&auto=format',
     },
     {
       id: 3,
-      title: "Managed IT Services",
+      title: 'Managed Service Provider',
       description:
         "At Triple E Technology Solutions, we believe great technology shouldn't just run your business—it should empower it. As your Managed Service Provider (MSP), we take the stress out of...",
       image:
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop&auto=format",
+        'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop&auto=format',
     },
   ];
 
