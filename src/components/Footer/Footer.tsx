@@ -39,10 +39,10 @@ const footerNavigation = {
   company: {
     title: 'Company',
     links: [
-      { label: 'About Us', href: '/company' },
+      { label: 'About Us', href: '/about-us' },
       { label: 'Partners', href: '/partners' },
-      { label: 'Careers', href: '/company/careers' },
-      { label: 'Newsroom', href: '/company/newsroom' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Newsroom', href: '/newsroom' },
     ],
   },
 };

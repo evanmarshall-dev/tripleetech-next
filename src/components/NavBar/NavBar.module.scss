@@ -40,6 +40,9 @@
 }
 
 .utilityButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: inherit;
@@ -52,6 +55,12 @@
   white-space: nowrap;
   text-decoration: none;
 
+  svg {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+
   &:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.5);
@@ -62,6 +71,11 @@
   @media (width >= 768px) {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+
+    svg {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
   }
 }
 
