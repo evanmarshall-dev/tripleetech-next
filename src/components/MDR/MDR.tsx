@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useRef } from "react";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
-import styles from "@/components/MDR/MDR.module.scss";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useRef } from 'react';
+import { useInView, useMotionValue, useSpring } from 'framer-motion';
+import styles from '@/components/MDR/MDR.module.scss';
 
 const Counter = ({
   value,
-  suffix = "",
-  prefix = "",
+  suffix = '',
+  prefix = '',
   decimals = 0,
   step,
   className,
@@ -22,7 +22,7 @@ const Counter = ({
   className?: string;
 }) => {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: false, margin: "-20px" });
+  const isInView = useInView(ref, { once: false, margin: '-20px' });
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
     damping: 30,
@@ -38,7 +38,7 @@ const Counter = ({
   }, [isInView, value, motionValue]);
 
   useEffect(() => {
-    return springValue.on("change", (latest) => {
+    return springValue.on('change', (latest) => {
       if (ref.current) {
         let displayValue = latest;
         if (step) {
@@ -60,7 +60,7 @@ const MDR = () => {
         {/* Background Image with Next.js Optimization */}
         <div className={styles.imageWrapper}>
           <Image
-            src='/images/world.png'
+            src='/images/surveillance.jpg'
             alt='Triple E Tech: Monochromatic map of the world.'
             fill
             priority
@@ -88,7 +88,7 @@ const MDR = () => {
             </h1>
 
             {/* Stats Grid */}
-            <div className={styles.statsGrid}>
+            {/* <div className={styles.statsGrid}>
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>24/7</span>
                 <span className={styles.statLabel}>Monitoring</span>
@@ -112,12 +112,14 @@ const MDR = () => {
                 />
                 <span className={styles.statLabel}>Threats Blocked</span>
               </div>
-            </div>
+            </div> */}
 
             {/* CTA Buttons */}
-            {/* TODO: Make sure the corresponding pages/routes match the link once created. */}
             <div className={styles.ctaGroup}>
-              <Link href='/mdr' className={styles.primaryCta}>
+              <Link
+                href='/managed-detection-response'
+                className={styles.primaryCta}
+              >
                 Explore MDR
               </Link>
             </div>

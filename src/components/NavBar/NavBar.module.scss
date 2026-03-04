@@ -94,7 +94,7 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-height: 4rem;
   gap: 2rem;
@@ -115,17 +115,17 @@
 
 .logoContainer {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 
   @media (width >= 480px) {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
   }
 
   @media (width >= 1140px) {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   img {
@@ -145,9 +145,9 @@
 
 .mobileLogoWrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
 
   @media (width >= 1140px) {
     display: none;

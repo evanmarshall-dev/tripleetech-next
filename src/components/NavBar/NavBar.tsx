@@ -15,7 +15,7 @@ const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(
-    null
+    null,
   );
   const dropdownRef = useRef<HTMLLIElement>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -153,7 +153,7 @@ const NavBar = () => {
               <path d='M10 12h4' />
               <path d='M10 16h4' />
             </svg>
-            Trouble Ticket
+            Submit Ticket
           </a>
         </div>
       </div>
@@ -240,7 +240,7 @@ const NavBar = () => {
                     {item.label}
                   </Link>
                 </li>
-              )
+              ),
             )}
           </ul>
 
@@ -302,7 +302,7 @@ const NavBar = () => {
                     {item.label}
                   </Link>
                 </li>
-              )
+              ),
             )}
           </ul>
         </div>

@@ -1,16 +1,13 @@
 // --------------------------
 // HERO COMPONENT
 // --------------------------
-@use "../../styles/abstracts" as *;
+@use '../../styles/abstracts' as *;
 
 .mdr {
   position: relative;
   width: 100%;
   min-height: 400px;
   overflow: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  // Default (Light Theme) -> Dark Background
   background-color: $gray-900;
   color: $gray-50;
 
@@ -28,11 +25,6 @@
   }
 }
 
-:global(:root[style*="color-scheme: dark"]) .mdr {
-  // Dark Theme -> Light Background
-  background-color: $gray-100;
-  color: $gray-900;
-}
 
 .mdrContent {
   position: relative;
@@ -52,7 +44,7 @@
 
 .mdrImage {
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
   transition: filter 0.3s ease;
 }
 

@@ -16,7 +16,7 @@ const CompanyPage = () => {
       title: 'Efficiency',
       icon: '/icons/efficiency.svg',
       description:
-        'We streamline your technology operations, eliminating waste and maximizing productivity so you can focus on what matters most—growing your business.',
+        'We help streamline your technology operations to maximize productivity so you can focus on what matters most—growing your business.',
     },
     {
       title: 'Effectiveness',
@@ -36,7 +36,7 @@ const CompanyPage = () => {
     {
       title: 'Local Expertise, Global Standards',
       description:
-        'As a locally owned and operated company in the Annapolis Valley, we combine community values with enterprise-level technology solutions.',
+        'We provide a fresh perspective that combines community values with enterprise-level technology solutions.',
     },
     {
       title: 'End-to-End Solutions',
@@ -230,8 +230,7 @@ const CompanyPage = () => {
             <div className={styles.aboutContent}>
               <p className={styles.aboutText}>
                 At Triple E Technology Solutions, we believe that the right IT
-                support can empower businesses to thrive. As a locally owned and
-                operated company in the Annapolis Valley, we&apos;re more than
+                support can empower businesses to thrive. We&apos;re more than
                 just an IT consulting firm—we&apos;re your technology partner.
               </p>
               <p className={styles.aboutText}>
@@ -319,7 +318,7 @@ const CompanyPage = () => {
         </section>
 
         {/* Stats Section */}
-        <section className={styles.stats} aria-label='Company statistics'>
+        {/* <section className={styles.stats} aria-label='Company statistics'>
           <div className={styles.container}>
             <div className={styles.statsGrid}>
               <div className={styles.statItem}>
@@ -340,7 +339,7 @@ const CompanyPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Quick Links Section */}
         <section className={styles.quickLinks} aria-labelledby='links-heading'>
@@ -391,7 +390,10 @@ const CompanyPage = () => {
               <Link href='/contact' className={styles.ctaPrimary}>
                 Contact Us Today
               </Link>
-              <Link href='/managed-service-provider' className={styles.ctaSecondary}>
+              <Link
+                href='/managed-service-provider'
+                className={styles.ctaSecondary}
+              >
                 View Our Services
               </Link>
             </div>

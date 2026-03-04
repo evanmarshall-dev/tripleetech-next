@@ -8,12 +8,8 @@ const footerNavigation = {
     title: 'Products & Services',
     links: [
       {
-        label: 'Cybersecurity Solutions',
+        label: '24/7 Monitored Cybersecurity',
         href: '/cybersecurity',
-      },
-      {
-        label: 'Managed Detection & Response',
-        href: '/managed-detection-response',
       },
       {
         label: 'Consulting Services',
@@ -32,7 +28,7 @@ const footerNavigation = {
         label: 'Remote Help',
         href: 'https://tripleesupport.screenconnect.com/',
       },
-      { label: 'Trouble Ticket', href: 'mailto:help@tripleetech.ca' },
+      { label: 'Submit Ticket', href: 'mailto:help@tripleetech.ca' },
       { label: 'Knowledge Base', href: '/support/knowledge-base' },
     ],
   },

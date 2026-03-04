@@ -170,10 +170,10 @@ const ManagedServiceProviderPage = () => {
               </p>
               <p className={styles.aboutText}>
                 Our managed services are designed to feel like an extension of
-                your team. We proactively monitor your systems, prevent downtime
-                before it happens, and keep your technology running smoothly—all
-                while providing the responsive, relationship-driven support you
-                can count on.
+                your team. We proactively monitor your systems, minimize
+                downtime, and keep your technology running smoothly—all while
+                providing the responsive, relationship-driven support you can
+                count on.
               </p>
             </div>
           </div>
@@ -272,30 +272,6 @@ const ManagedServiceProviderPage = () => {
                 </li>
               ))}
             </ul>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className={styles.stats} aria-label='Service statistics'>
-          <div className={styles.container}>
-            <div className={styles.statsGrid}>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>24/7</span>
-                <span className={styles.statLabel}>System Monitoring</span>
-              </div>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>99.9%</span>
-                <span className={styles.statLabel}>Uptime Guarantee</span>
-              </div>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>&lt;1hr</span>
-                <span className={styles.statLabel}>Response Time</span>
-              </div>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>100%</span>
-                <span className={styles.statLabel}>Client Focused</span>
-              </div>
-            </div>
           </div>
         </section>
 
