@@ -567,9 +567,9 @@
 }
 
 // --------------------------
-// MDR HIGHLIGHT SECTION
+// CYBERSECURITY OFFERINGS SECTION
 // --------------------------
-.mdrHighlight {
+.offerings {
   padding: 4rem 0;
   background: linear-gradient(
     135deg,
@@ -584,7 +584,7 @@
   }
 }
 
-:global(:root:not([style*='color-scheme: dark'])) .mdrHighlight {
+:global(:root:not([style*='color-scheme: dark'])) .offerings {
   background: linear-gradient(
     135deg,
     $light-primary 0%,
@@ -593,13 +593,13 @@
   );
 }
 
-.mdrContent {
+.offeringsContent {
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
 }
 
-.mdrBadge {
+.offeringsBadge {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: rgba(255, 255, 255, 0.2);
@@ -612,70 +612,49 @@
   margin-bottom: 1.5rem;
 }
 
-.mdrTitle {
+.offeringsTitle {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
   color: white;
   margin: 0 0 1.5rem;
 }
 
-.mdrDescription {
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0 0 1.5rem;
-}
-
-.mdrStats {
+.offeringsList {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  margin: 3rem 0;
+  gap: 1rem;
+  text-align: left;
 
-  @media (width >= 640px) {
-    grid-template-columns: repeat(3, 1fr);
+  @media (width >= 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 2.5rem;
   }
 }
 
-.mdrStatItem {
-  text-align: center;
-}
+.offeringsItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
 
-.mdrStatNumber {
-  display: block;
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.mdrStatLabel {
-  display: block;
-  font-size: 0.9rem;
-  opacity: 0.9;
-  letter-spacing: 0.02em;
-}
-
-.mdrCta {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: var(--color-secondary);
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  &:focus-visible {
-    outline: 2px solid white;
-    outline-offset: 2px;
+  &::before {
+    content: '✓';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--color-accent);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    font-weight: 700;
+    flex-shrink: 0;
   }
 }
 

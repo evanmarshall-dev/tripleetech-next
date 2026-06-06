@@ -52,10 +52,10 @@ const ConsultingServicesPage = () => {
     {
       title: 'Future-Ready Solutions',
       description:
-        'Plans that solve today&apos;s problems while preparing your business for tomorrow&apos;s opportunities and challenges.',
+        "Plans that solve today's problems while preparing your business for tomorrow's opportunities and challenges.",
     },
     {
-      title: 'Budget Conscious',
+      title: 'Predictable Costs',
       description:
         'Solutions that fit your budget and deliver real value, with transparent communication about costs and timelines.',
     },

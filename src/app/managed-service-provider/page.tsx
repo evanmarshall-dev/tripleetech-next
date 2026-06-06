@@ -38,7 +38,7 @@ const ManagedServiceProviderPage = () => {
     },
   ];
 
-  const serviceFeatures = [
+  const serviceFeatures: { title: string; description?: string }[] = [
     {
       title: 'System Management',
       description:
@@ -59,6 +59,13 @@ const ManagedServiceProviderPage = () => {
       description:
         'Long-term technology planning that aligns with your business goals and prepares you for future growth.',
     },
+    { title: 'Business Continuity and Disaster Planning' },
+    { title: 'Network Infrastructure Support' },
+    { title: 'Workstation Software and Hardware Support' },
+    { title: 'Server Software and Hardware Support' },
+    { title: 'Printer Support' },
+    { title: 'Cloud Solutions' },
+    { title: 'Office 365' },
   ];
 
   return (
@@ -266,9 +273,11 @@ const ManagedServiceProviderPage = () => {
               {serviceFeatures.map((feature) => (
                 <li key={feature.title} className={styles.featureItem}>
                   <h3 className={styles.featureTitle}>{feature.title}</h3>
-                  <p className={styles.featureDescription}>
-                    {feature.description}
-                  </p>
+                  {feature.description && (
+                    <p className={styles.featureDescription}>
+                      {feature.description}
+                    </p>
+                  )}
                 </li>
               ))}
             </ul>

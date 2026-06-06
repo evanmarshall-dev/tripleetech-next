@@ -56,7 +56,11 @@ const PartnerLogos = () => {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <section className={styles.partnerLogos} aria-label='Our Partners'>
+    <section
+      id='partners'
+      className={styles.partnerLogos}
+      aria-label='Our Partners'
+    >
       <div className={styles.container}>
         <div className={styles.header}>
           <p className={styles.badge}>Trusted Partners</p>

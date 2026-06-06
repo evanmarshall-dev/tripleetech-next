@@ -2,61 +2,12 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
-import { useInView, useMotionValue, useSpring } from 'framer-motion';
-import styles from '@/components/MDR/MDR.module.scss';
+import styles from '@/components/CybersecurityHero/CybersecurityHero.module.scss';
 
-const Counter = ({
-  value,
-  suffix = '',
-  prefix = '',
-  decimals = 0,
-  step,
-  className,
-}: {
-  value: number;
-  suffix?: string;
-  prefix?: string;
-  decimals?: number;
-  step?: number;
-  className?: string;
-}) => {
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: false, margin: '-20px' });
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, {
-    damping: 30,
-    stiffness: 60,
-  });
-
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    } else {
-      motionValue.set(0);
-    }
-  }, [isInView, value, motionValue]);
-
-  useEffect(() => {
-    return springValue.on('change', (latest) => {
-      if (ref.current) {
-        let displayValue = latest;
-        if (step) {
-          displayValue = Math.round(latest / step) * step;
-        }
-        ref.current.textContent =
-          prefix + displayValue.toFixed(decimals) + suffix;
-      }
-    });
-  }, [springValue, decimals, suffix, prefix, step]);
-
-  return <span ref={ref} className={className} />;
-};
-
-const MDR = () => {
+const CybersecurityHero = () => {
   return (
-    <section className={styles.mdr} aria-label='Hero section'>
-      <div className={styles.mdrContent}>
+    <section className={styles.hero} aria-label='Hero section'>
+      <div className={styles.heroContent}>
         {/* Background Image with Next.js Optimization */}
         <div className={styles.imageWrapper}>
           <Image
@@ -66,7 +17,7 @@ const MDR = () => {
             priority
             quality={90}
             sizes='100vw'
-            className={styles.mdrImage}
+            className={styles.heroImage}
             role='presentation'
           />
           {/* Dark overlay for better text contrast */}
@@ -78,7 +29,7 @@ const MDR = () => {
           <div className={styles.textContent}>
             {/* Eyebrow text */}
             <p className={styles.badge} aria-label='Category'>
-              MANAGED DETECTION &amp; RESPONSE
+              CYBERSECURITY SOLUTIONS
             </p>
 
             {/* Main Heading */}
@@ -117,10 +68,10 @@ const MDR = () => {
             {/* CTA Buttons */}
             <div className={styles.ctaGroup}>
               <Link
-                href='/managed-detection-response'
+                href='/cybersecurity#offerings-heading'
                 className={styles.primaryCta}
               >
-                Explore MDR
+                Explore Cybersecurity
               </Link>
             </div>
           </div>
@@ -130,4 +81,4 @@ const MDR = () => {
   );
 };
 
-export default MDR;
+export default CybersecurityHero;

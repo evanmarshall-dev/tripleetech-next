@@ -95,7 +95,7 @@ const CompanyPage = () => {
                 Technology That Moves Your Business Forward
               </h1>
               <p className={styles.heroSubtitle}>
-                Your trusted technology partner in the Annapolis Valley
+                Your trusted technology partner
               </p>
               <Link href='/contact' className={styles.heroCta}>
                 Get Started

@@ -31,9 +31,8 @@ const TermsOfService = () => {
           <h2>2. Description of Services</h2>
           <p>
             Triple E Technology Solutions provides cybersecurity services,
-            including but not limited to Managed Detection and Response (MDR),
-            endpoint security, network security, cloud security, consulting
-            services, and security assessments.
+            including but not limited to endpoint security, network security,
+            cloud security, consulting services, and security assessments.
           </p>
         </section>
 

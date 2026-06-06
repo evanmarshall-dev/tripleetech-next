@@ -279,7 +279,7 @@ const ContactPage = () => {
                   </div>
                 </dl>
                 <p className={styles.hoursNote}>
-                  Emergency support available 24/7 for managed service clients.
+                  Emergency Support available 24/7 for Contracted Clients
                 </p>
 
                 {/* Quick Actions */}

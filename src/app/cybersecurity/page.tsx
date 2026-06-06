@@ -19,10 +19,10 @@ const CybersecurityPage = () => {
         'Continuous 24/7 monitoring of your systems to detect and respond to threats in real-time, keeping your business protected around the clock.',
     },
     {
-      title: 'Employee Training',
-      icon: '/icons/training-icon.svg',
+      title: 'Expert Analysis',
+      icon: '/icons/analysis-icon.svg',
       description:
-        'Comprehensive security awareness training that empowers your team to recognize and prevent cyber threats before they impact your business.',
+        'Human expertise combined with AI-powered tools to analyze threats, reduce false positives, and provide actionable insights.',
     },
     {
       title: 'Data Protection',
@@ -59,6 +59,16 @@ const CybersecurityPage = () => {
       description:
         'Comprehensive backup and disaster recovery plans that keep your business running smoothly, even in the face of cyber incidents.',
     },
+  ];
+
+  const cybersecurityOfferings = [
+    'Intelligent Malicious Behaviour Detection and Remediation',
+    'Dark Web Monitoring',
+    'Intelligent spam filtering',
+    'Phishing Simulation and Awareness training',
+    'Multifactor authentication',
+    '24/7 Monitored Security Information and Event Management (SIEM)',
+    '24/7 Monitoring by our Security Operations Centre (SOC)',
   ];
 
   return (
@@ -263,46 +273,24 @@ const CybersecurityPage = () => {
           </div>
         </section>
 
-        {/* MDR Highlight Section */}
-        <section className={styles.mdrHighlight} aria-labelledby='mdr-heading'>
+        {/* Cybersecurity Offerings Section */}
+        <section
+          className={styles.offerings}
+          aria-labelledby='offerings-heading'
+        >
           <div className={styles.container}>
-            <div className={styles.mdrContent}>
-              <p className={styles.mdrBadge}>
-                MANAGED DETECTION &amp; RESPONSE
-              </p>
-              <h2 id='mdr-heading' className={styles.mdrTitle}>
+            <div className={styles.offeringsContent}>
+              <p className={styles.offeringsBadge}>CYBERSECURITY OFFERINGS</p>
+              <h2 id='offerings-heading' className={styles.offeringsTitle}>
                 Enterprise-Level Protection, Without the Complexity
               </h2>
-              <p className={styles.mdrDescription}>
-                When it comes to cybersecurity, our Managed Detection and
-                Response (MDR) service gives you enterprise-level protection
-                without the enterprise-level complexity. We combine advanced
-                monitoring tools with real-time threat detection and expert
-                response to stop cyber incidents before they impact your
-                business.
-              </p>
-              <p className={styles.mdrDescription}>
-                It&apos;s continuous security, backed by a team that genuinely
-                cares about keeping you protected and confident in your
-                technology.
-              </p>
-              <div className={styles.mdrStats}>
-                <div className={styles.mdrStatItem}>
-                  <span className={styles.mdrStatNumber}>24/7</span>
-                  <span className={styles.mdrStatLabel}>Threat Monitoring</span>
-                </div>
-                <div className={styles.mdrStatItem}>
-                  <span className={styles.mdrStatNumber}>&lt;15</span>
-                  <span className={styles.mdrStatLabel}>Min Response Time</span>
-                </div>
-                <div className={styles.mdrStatItem}>
-                  <span className={styles.mdrStatNumber}>100%</span>
-                  <span className={styles.mdrStatLabel}>Threat Coverage</span>
-                </div>
-              </div>
-              <Link href='/managed-detection-response' className={styles.mdrCta}>
-                Learn About MDR
-              </Link>
+              <ul className={styles.offeringsList}>
+                {cybersecurityOfferings.map((offering) => (
+                  <li key={offering} className={styles.offeringsItem}>
+                    {offering}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -320,9 +308,12 @@ const CybersecurityPage = () => {
             </p>
             <div className={styles.ctaButtons}>
               <Link href='/contact' className={styles.ctaPrimary}>
-                Get a Security Assessment
+                I am Ready
               </Link>
-              <Link href='/managed-service-provider' className={styles.ctaSecondary}>
+              <Link
+                href='/managed-service-provider'
+                className={styles.ctaSecondary}
+              >
                 View All Services
               </Link>
             </div>

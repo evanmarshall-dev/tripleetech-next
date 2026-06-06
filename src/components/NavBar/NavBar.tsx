@@ -93,17 +93,7 @@ const NavBar = () => {
   }, []);
 
   const navItems: NavItem[] = [
-    {
-      label: 'Cybersecurity',
-      href: '/cybersecurity',
-      children: [
-        { label: 'Overview', href: '/cybersecurity' },
-        {
-          label: 'Managed Detection & Response',
-          href: '/managed-detection-response',
-        },
-      ],
-    },
+    { label: 'Cybersecurity', href: '/cybersecurity' },
     { label: 'Managed Services', href: '/managed-service-provider' },
     { label: 'Consulting', href: '/consulting-services' },
     { label: 'About Us', href: '/about-us' },
