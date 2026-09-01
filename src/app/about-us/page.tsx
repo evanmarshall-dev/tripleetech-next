@@ -393,10 +393,7 @@ const CompanyPage = () => {
               <Link href='/contact' className={styles.ctaPrimary}>
                 Contact Us Today
               </Link>
-              <Link
-                href='/managed-service-provider'
-                className={styles.ctaSecondary}
-              >
+              <Link href='/#services' className={styles.ctaSecondary}>
                 View Our Services
               </Link>
             </div>

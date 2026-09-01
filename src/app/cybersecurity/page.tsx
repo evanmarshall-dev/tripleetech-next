@@ -317,7 +317,7 @@ const CybersecurityPage = () => {
                 href='/managed-service-provider'
                 className={styles.ctaSecondary}
               >
-                View All Services
+                View Managed Services
               </Link>
             </div>
           </div>

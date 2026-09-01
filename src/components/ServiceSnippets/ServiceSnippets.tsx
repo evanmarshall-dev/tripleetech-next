@@ -27,7 +27,7 @@ const ServiceSnippets = () => {
   ];
 
   return (
-    <section className={styles.serviceSnippets}>
+    <section id='services' className={styles.serviceSnippets}>
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.badge}>SERVICES & SUPPORT</span>
