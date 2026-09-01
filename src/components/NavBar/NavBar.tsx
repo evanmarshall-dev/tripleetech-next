@@ -159,6 +159,7 @@ const NavBar = () => {
                   src='/icons/logo-sm.svg'
                   alt='Triple E Technology Solutions logo. Small blue cube with letter E on all sides.'
                   fill
+                  sizes='48px'
                 />
               </div>
               <div className={styles.brandText}>
@@ -176,6 +177,7 @@ const NavBar = () => {
                   src='/icons/logo-sm.svg'
                   alt='Triple E Technology Solutions logo. Small blue cube with letter E on all sides.'
                   fill
+                  sizes='48px'
                 />
               </div>
               <span className={styles.mobileBrandName}>Triple E Tech</span>

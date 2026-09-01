@@ -178,6 +178,7 @@ const Footer = () => {
                     src='/icons/logo-sm.svg'
                     alt='Triple E Technology Solutions'
                     fill
+                    sizes='32px'
                   />
                 </div>
               </Link>

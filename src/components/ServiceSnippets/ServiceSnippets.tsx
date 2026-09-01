@@ -50,6 +50,7 @@ const ServiceSnippets = () => {
                   alt={`${item.title} - Professional IT services illustration`}
                   width={400}
                   height={250}
+                  sizes='(min-width: 1024px) 384px, (min-width: 768px) 45vw, 90vw'
                   className={styles.cardImage}
                 />
               </div>

@@ -244,6 +244,7 @@ const CybersecurityPage = () => {
                   alt='Cybersecurity team working together to protect business systems'
                   width={600}
                   height={500}
+                  sizes='(min-width: 1280px) 576px, (min-width: 1024px) 45vw, 100vw'
                   className={styles.collaborationImage}
                 />
               </div>

@@ -14,7 +14,6 @@ const CybersecurityHero = () => {
             src='/images/homepage-cybersecurity.jpg'
             alt='Triple E Tech: Monochromatic map of the world.'
             fill
-            priority
             quality={90}
             sizes='100vw'
             className={styles.heroImage}
