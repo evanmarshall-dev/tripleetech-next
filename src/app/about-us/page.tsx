@@ -73,7 +73,7 @@ const CompanyPage = () => {
     {
       title: 'Our Partners',
       description: 'Industry leaders we work with',
-      href: '/partners',
+      href: '/#partners',
       icon: '/icons/partners-icon.svg',
     },
     {
@@ -308,7 +308,7 @@ const CompanyPage = () => {
               </div>
               <div className={styles.whyUsImage}>
                 <Image
-                  src='/images/team-collaboration.jpg'
+                  src='/images/why-triple-e.jpg'
                   alt='Triple E team collaborating on technology solutions'
                   width={600}
                   height={500}

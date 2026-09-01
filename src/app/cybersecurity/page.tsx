@@ -240,7 +240,7 @@ const CybersecurityPage = () => {
               </div>
               <div className={styles.whyUsImage}>
                 <Image
-                  src='/images/security-partnership.jpg'
+                  src='/images/cybersecurity-approach.jpg'
                   alt='Cybersecurity team working together to protect business systems'
                   width={600}
                   height={500}

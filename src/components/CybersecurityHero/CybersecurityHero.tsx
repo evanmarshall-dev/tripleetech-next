@@ -11,7 +11,7 @@ const CybersecurityHero = () => {
         {/* Background Image with Next.js Optimization */}
         <div className={styles.imageWrapper}>
           <Image
-            src='/images/surveillance.jpg'
+            src='/images/homepage-cybersecurity.jpg'
             alt='Triple E Tech: Monochromatic map of the world.'
             fill
             priority

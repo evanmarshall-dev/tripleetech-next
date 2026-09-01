@@ -11,7 +11,7 @@ const Hero = () => {
         {/* Background Image with Next.js Optimization */}
         <div className={styles.imageWrapper}>
           <Image
-            src='/images/hero-xl.png'
+            src='/images/hero-xl.jpg'
             alt='Triple E Tech: Blue and green abstract technology background with electrical current patterns'
             fill
             priority
@@ -50,7 +50,10 @@ const Hero = () => {
               <Link href='/contact' className={styles.primaryCta}>
                 Get Started
               </Link>
-              <Link href='/services' className={styles.secondaryCta}>
+              <Link
+                href='/managed-service-provider'
+                className={styles.secondaryCta}
+              >
                 Our Services
               </Link>
             </div>

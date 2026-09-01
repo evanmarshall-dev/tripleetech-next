@@ -250,7 +250,7 @@ const ManagedServiceProviderPage = () => {
               </div>
               <div className={styles.whyUsImage}>
                 <Image
-                  src='/images/msp-partnership.jpg'
+                  src='/images/managed-services-team.jpg'
                   alt='Triple E team providing managed IT services support'
                   width={600}
                   height={500}
