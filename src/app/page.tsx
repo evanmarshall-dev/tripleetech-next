@@ -5,10 +5,12 @@ import ServiceSnippets from '@/components/ServiceSnippets/ServiceSnippets';
 import CybersecurityHero from '@/components/CybersecurityHero/CybersecurityHero';
 import PartnerLogos from '@/components/PartnerLogos/PartnerLogos';
 import Footer from '@/components/Footer/Footer';
+import { BusinessJsonLd } from '@/lib/business';
 
 const Home = () => {
   return (
     <>
+      <BusinessJsonLd />
       <NavBar />
       <Hero />
       <WaveDivider />

@@ -3,6 +3,7 @@ import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './contact.module.scss';
 import { buildMetadata } from '@/lib/metadata';
+import { BusinessJsonLd } from '@/lib/business';
 
 export const metadata = buildMetadata({
   title: 'Contact Us',
@@ -18,65 +19,6 @@ export const metadata = buildMetadata({
     'IT consulting Nova Scotia',
   ],
 });
-
-// JSON-LD structured data for local business SEO
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Triple E Technology Solutions',
-  image: 'https://www.tripleetech.ca/icons/logo-sm.svg',
-  '@id': 'https://www.tripleetech.ca',
-  url: 'https://www.tripleetech.ca',
-  telephone: '+1-902-365-7333',
-  email: 'help@tripleetech.ca',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '535 Main Street',
-    addressLocality: 'Kentville',
-    addressRegion: 'NS',
-    postalCode: 'B4N 1L4',
-    addressCountry: 'CA',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 45.0781,
-    longitude: -64.5054,
-  },
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-      opens: '08:00',
-      closes: '16:30',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Friday'],
-      opens: '08:00',
-      closes: '16:00',
-    },
-  ],
-  sameAs: [
-    'https://www.facebook.com/tripleetech',
-    'https://www.linkedin.com/company/triple-e-technology-solutions',
-  ],
-  priceRange: '$$',
-  areaServed: {
-    '@type': 'GeoCircle',
-    geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: 45.0781,
-      longitude: -64.5054,
-    },
-    geoRadius: '100000',
-  },
-  serviceType: [
-    'Managed IT Services',
-    'Cybersecurity',
-    'IT Consulting',
-    'Network Support',
-  ],
-};
 
 const ContactPage = () => {
   const contactMethods = [
@@ -169,11 +111,7 @@ const ContactPage = () => {
 
   return (
     <>
-      {/* JSON-LD Structured Data */}
-      <script
-        type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <BusinessJsonLd />
 
       <NavBar />
       <main className={styles.contactPage}>
