@@ -1,7 +1,7 @@
 // --------------------------
 // BASE
 // --------------------------
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 :root {
   @include root-styles;
@@ -21,7 +21,7 @@
   --color-card-bg: #{$light-card-bg};
 }
 
-:root[style*="color-scheme: dark"] {
+:root[style*='color-scheme: dark'] {
   --color-primary: #{$dark-primary};
   --color-secondary: #{$dark-secondary};
   --color-accent: #{$dark-accent};

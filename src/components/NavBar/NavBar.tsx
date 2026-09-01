@@ -15,7 +15,7 @@ const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(
-    null,
+    null
   );
   const dropdownRef = useRef<HTMLLIElement>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -230,7 +230,7 @@ const NavBar = () => {
                     {item.label}
                   </Link>
                 </li>
-              ),
+              )
             )}
           </ul>
 
@@ -292,7 +292,7 @@ const NavBar = () => {
                     {item.label}
                   </Link>
                 </li>
-              ),
+              )
             )}
           </ul>
         </div>
