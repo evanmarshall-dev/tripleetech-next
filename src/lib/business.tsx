@@ -3,14 +3,16 @@ import { SITE_NAME, SITE_URL } from '@/lib/metadata';
 /**
  * LocalBusiness entity for the whole site. Rendered on the homepage (the
  * page Google associates with the organization) and on /contact. Both use
- * the same @id so they describe one entity rather than two.
+ * the same @id so they describe one entity rather than two. The @id uses a
+ * #organization fragment so the business is identified separately from the
+ * web page that happens to live at the same URL.
  */
 const businessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: SITE_NAME,
   image: `${SITE_URL}/icons/logo-sm.svg`,
-  '@id': SITE_URL,
+  '@id': `${SITE_URL}/#organization`,
   url: SITE_URL,
   telephone: '+1-902-365-7333',
   email: 'help@tripleetech.ca',
