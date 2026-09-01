@@ -7,6 +7,8 @@ import styles from './PartnerLogos.module.scss';
 interface Partner {
   name: string;
   logo: string;
+  width: number;
+  height: number;
   url: string;
 }
 
@@ -15,36 +17,50 @@ const partners: Partner[] = [
   {
     name: 'Fortinet Silver',
     logo: '/images/partners/fortinet-silver.png',
+    width: 1999,
+    height: 558,
     url: 'https://www.fortinet.com/',
   },
   {
     name: 'Cloudli',
     logo: '/images/partners/cloudli.png',
+    width: 581,
+    height: 248,
     url: 'https://www.cloudli.com/en-ca/',
   },
   {
     name: 'HP Enterprise',
     logo: '/images/partners/hp-enterprise.png',
+    width: 300,
+    height: 125,
     url: 'https://store.hp.com/CanadaStore/Merch/Default.aspx',
   },
   {
     name: 'HP',
     logo: '/images/partners/hp.png',
+    width: 300,
+    height: 300,
     url: 'https://store.hp.com/CanadaStore/Merch/Default.aspx',
   },
   {
     name: 'Lenovo',
     logo: '/images/partners/lenovo.png',
+    width: 300,
+    height: 98,
     url: 'https://www.lenovo.com/ca/en/',
   },
   {
     name: 'Microsoft Silver',
     logo: '/images/partners/microsoft-silver.png',
+    width: 660,
+    height: 433,
     url: 'https://partner.microsoft.com/en-ca/community/solutionaggregators',
   },
   {
     name: 'TouchBistro',
     logo: '/images/partners/touchbistro.png',
+    width: 300,
+    height: 82,
     url: 'https://www.touchbistro.com/',
   },
 ];
@@ -86,8 +102,9 @@ const PartnerLogos = () => {
                   <Image
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    width={120}
-                    height={48}
+                    width={partner.width}
+                    height={partner.height}
+                    sizes='120px'
                     className={styles.logo}
                   />
                 </div>
