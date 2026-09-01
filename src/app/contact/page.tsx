@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './contact.module.scss';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Contact Us | Triple E Technology Solutions',
+export const metadata = buildMetadata({
+  title: 'Contact Us',
   description:
-    'Get in touch with Triple E Technology Solutions. Located in Kentville, Nova Scotia, we provide IT support, cybersecurity, and managed services to businesses across the Annapolis Valley.',
+    'Get in touch with Triple E Technology Solutions in Kentville, NS. IT support, cybersecurity, and managed services across the Annapolis Valley.',
+  path: '/contact',
   keywords: [
     'IT support Kentville',
     'IT services Annapolis Valley',
@@ -16,26 +17,16 @@ export const metadata: Metadata = {
     'contact Triple E',
     'IT consulting Nova Scotia',
   ],
-  openGraph: {
-    title: 'Contact Us | Triple E Technology Solutions',
-    description:
-      'Get in touch with Triple E Technology Solutions for IT support, cybersecurity, and managed services in the Annapolis Valley.',
-    url: 'https://tripleetech.ca/contact',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://tripleetech.ca/contact',
-  },
-};
+});
 
 // JSON-LD structured data for local business SEO
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Triple E Technology Solutions',
-  image: 'https://tripleetech.ca/icons/logo-sm.svg',
-  '@id': 'https://tripleetech.ca',
-  url: 'https://tripleetech.ca',
+  image: 'https://www.tripleetech.ca/icons/logo-sm.svg',
+  '@id': 'https://www.tripleetech.ca',
+  url: 'https://www.tripleetech.ca',
   telephone: '+1-902-365-7333',
   email: 'help@tripleetech.ca',
   address: {

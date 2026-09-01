@@ -3,12 +3,14 @@ import Link from 'next/link';
 import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './cybersecurity.module.scss';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata = {
-  title: 'Cybersecurity Solutions | Triple E Technology Solutions',
+export const metadata = buildMetadata({
+  title: 'Cybersecurity Solutions',
   description:
-    'Enterprise-level cybersecurity protection without the complexity. Comprehensive threat detection, monitoring, and response services for businesses in the Annapolis Valley.',
-};
+    'Enterprise-level cybersecurity without the complexity. Threat detection, 24/7 monitoring, and rapid response for businesses in the Annapolis Valley.',
+  path: '/cybersecurity',
+});
 
 const CybersecurityPage = () => {
   const securityServices = [

@@ -3,12 +3,14 @@ import Link from 'next/link';
 import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './consulting-services.module.scss';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata = {
-  title: 'IT Consulting Services | Triple E Technology Solutions',
+export const metadata = buildMetadata({
+  title: 'IT Consulting Services',
   description:
-    'Strategic IT consulting that aligns technology with your business goals. Expert guidance, practical solutions, and genuine partnership for businesses in the Annapolis Valley.',
-};
+    'Strategic IT consulting that aligns technology with your business goals. Expert guidance and practical solutions for businesses in the Annapolis Valley.',
+  path: '/consulting-services',
+});
 
 const ConsultingServicesPage = () => {
   const consultingServices = [

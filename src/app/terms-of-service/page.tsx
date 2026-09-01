@@ -1,11 +1,13 @@
 import NavBar from '@/components/NavBar/NavBar';
 import styles from './legal.module.scss';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata = {
-  title: 'Terms of Service | Triple E Technology Solutions',
+export const metadata = buildMetadata({
+  title: 'Terms of Service',
   description:
     'Terms of Service for Triple E Technology Solutions. Read our terms and conditions for using our services.',
-};
+  path: '/terms-of-service',
+});
 
 const TermsOfService = () => {
   return (

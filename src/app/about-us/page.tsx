@@ -3,12 +3,14 @@ import Link from 'next/link';
 import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './company.module.scss';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata = {
-  title: 'About Us | Triple E Technology Solutions',
+export const metadata = buildMetadata({
+  title: 'About Us',
   description:
-    'Learn about Triple E Technology Solutions - your locally owned technology partner in the Annapolis Valley. Guided by efficiency, effectiveness, and excellence.',
-};
+    'Meet Triple E Technology Solutions, your locally owned technology partner in the Annapolis Valley. Guided by efficiency, effectiveness, and excellence.',
+  path: '/about-us',
+});
 
 const CompanyPage = () => {
   const coreValues = [

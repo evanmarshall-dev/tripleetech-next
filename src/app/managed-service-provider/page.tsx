@@ -3,12 +3,14 @@ import Link from 'next/link';
 import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './managed-service-provider.module.scss';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata = {
-  title: 'Managed Service Provider (MSP) | Triple E Technology Solutions',
+export const metadata = buildMetadata({
+  title: 'Managed Service Provider',
   description:
-    'Your trusted Managed Service Provider in the Annapolis Valley. Proactive IT management, 24/7 monitoring, and relationship-driven support for growing businesses.',
-};
+    'Your trusted Managed Service Provider in the Annapolis Valley. Proactive IT management, 24/7 monitoring, and support for growing businesses.',
+  path: '/managed-service-provider',
+});
 
 const ManagedServiceProviderPage = () => {
   const benefits = [

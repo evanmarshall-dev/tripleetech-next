@@ -1,11 +1,13 @@
 import NavBar from '@/components/NavBar/NavBar';
 import styles from './legal.module.scss';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata = {
-  title: 'Privacy Policy | Triple E Technology Solutions',
+export const metadata = buildMetadata({
+  title: 'Privacy Policy',
   description:
     'Privacy Policy for Triple E Technology Solutions. Learn how we collect, use, and protect your personal information.',
-};
+  path: '/privacy-policy',
+});
 
 const PrivacyPolicy = () => {
   return (
