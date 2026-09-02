@@ -79,7 +79,7 @@ const ConsultingServicesPage = () => {
         serviceType='IT Consulting'
       />
       <NavBar />
-      <main className={styles.consultingPage}>
+      <main id='main-content' className={styles.consultingPage}>
         {/* Hero Section */}
         <section className={styles.hero} aria-labelledby='hero-heading'>
           <div className={styles.heroContainer}>

@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
         items={[{ name: 'Privacy Policy', path: '/privacy-policy' }]}
       />
       <NavBar />
-      <main className={styles.legalPage}>
+      <main id='main-content' className={styles.legalPage}>
         <div className={styles.container}>
           <h1 className={styles.title}>Privacy Policy</h1>
           <p className={styles.lastUpdated}>Last Updated: January 2026</p>

@@ -116,7 +116,7 @@ const ContactPage = () => {
       <BusinessJsonLd />
 
       <NavBar />
-      <main className={styles.contactPage}>
+      <main id='main-content' className={styles.contactPage}>
         {/* Hero Section */}
         <section className={styles.hero} aria-labelledby='hero-heading'>
           <div className={styles.heroContainer}>

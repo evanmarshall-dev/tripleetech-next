@@ -60,3 +60,30 @@ body {
 .container {
   @include responsive-container;
 }
+
+// Skip link: first focusable element on the page, offscreen until focused.
+// Lets keyboard and screen reader users bypass the navigation instead of
+// tabbing through every nav item on every page. WCAG 2.4.1 (Level A).
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  border: 2px solid var(--color-primary);
+  border-radius: 0 0 6px 0;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-150%);
+
+  &:focus-visible,
+  &:focus {
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.15s ease;
+  }
+}

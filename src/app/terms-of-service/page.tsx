@@ -17,7 +17,7 @@ const TermsOfService = () => {
         items={[{ name: 'Terms of Service', path: '/terms-of-service' }]}
       />
       <NavBar />
-      <main className={styles.legalPage}>
+      <main id='main-content' className={styles.legalPage}>
         <div className={styles.container}>
           <h1 className={styles.title}>Terms of Service</h1>
           <p className={styles.lastUpdated}>Last Updated: January 2026</p>

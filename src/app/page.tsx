@@ -12,9 +12,9 @@ const Home = () => {
     <>
       <BusinessJsonLd />
       <NavBar />
-      <Hero />
-      <WaveDivider />
-      <main>
+      <main id='main-content'>
+        <Hero />
+        <WaveDivider />
         <ServiceSnippets />
         <CybersecurityHero />
         <WaveDivider />

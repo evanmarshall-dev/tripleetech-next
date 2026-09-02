@@ -89,7 +89,7 @@ const ManagedServiceProviderPage = () => {
         serviceType='Managed IT Services'
       />
       <NavBar />
-      <main className={styles.mspPage}>
+      <main id='main-content' className={styles.mspPage}>
         {/* Hero Section */}
         <section className={styles.hero} aria-labelledby='hero-heading'>
           <div className={styles.heroContainer}>

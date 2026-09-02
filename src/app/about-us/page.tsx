@@ -89,7 +89,7 @@ const CompanyPage = () => {
     <>
       <BreadcrumbJsonLd items={[{ name: 'About Us', path: '/about-us' }]} />
       <NavBar />
-      <main className={styles.companyPage}>
+      <main id='main-content' className={styles.companyPage}>
         {/* Hero Section */}
         <section className={styles.hero} aria-labelledby='hero-heading'>
           <div className={styles.heroContainer}>

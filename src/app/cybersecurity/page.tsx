@@ -87,7 +87,7 @@ const CybersecurityPage = () => {
         serviceType='Cybersecurity'
       />
       <NavBar />
-      <main className={styles.cybersecurityPage}>
+      <main id='main-content' className={styles.cybersecurityPage}>
         {/* Hero Section */}
         <section className={styles.hero} aria-labelledby='hero-heading'>
           <div className={styles.heroContainer}>

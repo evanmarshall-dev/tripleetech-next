@@ -47,6 +47,9 @@ export default function RootLayout({
   return (
     <html data-scroll-behavior='smooth' lang='en'>
       <body className={`${inter.variable}`}>
+        <a href='#main-content' className='skip-link'>
+          Skip to main content
+        </a>
         {children}
         <Widget />
         <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
