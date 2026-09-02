@@ -7,6 +7,11 @@ import '@/styles/globals.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // Google Search Console ownership proof for the www URL-prefix property.
+  // Must be server-rendered: the GA-based method fails because
+  // @next/third-parties injects gtag after hydration, so the verifier
+  // (which does not run JavaScript) never sees it.
+  verification: { google: 'OYc2NkwFuBF4pwMrR6MnLE7OPjoWbOa9omaQdnQ3JZw' },
   title: {
     template: '%s | Triple E Technology Solutions',
     default: 'Triple E Technology Solutions',
