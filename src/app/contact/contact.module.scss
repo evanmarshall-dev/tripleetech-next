@@ -239,158 +239,15 @@
 
 // --------------------------
 // MAIN CONTENT SECTION (Form - commented out but styles preserved)
-// --------------------------
-.mainContent {
-  padding: 4rem 0;
-  background: var(--color-background);
-
-  @media (width >= 768px) {
-    padding: 6rem 0;
-  }
-}
-
-.contentGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-
-  @media (width >= 1024px) {
-    grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
-  }
-}
 
 // --------------------------
 // CONTACT FORM (commented out but styles preserved)
-// --------------------------
-.formWrapper {
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 2rem;
-
-  @media (width >= 768px) {
-    padding: 2.5rem;
-  }
-}
-
-.formIntro {
-  font-size: 1rem;
-  color: var(--color-foreground);
-  opacity: 0.8;
-  margin: 0 0 2rem;
-  line-height: 1.6;
-}
-
-.contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.formRow {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-
-  @media (width >= 640px) {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.formGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.formLabel {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-foreground);
-
-  span {
-    color: var(--color-accent);
-  }
-}
 
 .formInput,
 .formSelect,
-.formTextarea {
-  padding: 0.875rem 1rem;
-  font-size: 1rem;
-  color: var(--color-foreground);
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  font-family: inherit;
-
-  &::placeholder {
-    color: var(--color-foreground);
-    opacity: 0.5;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.1);
-  }
-}
-
-.formSelect {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 1.25rem;
-  padding-right: 2.5rem;
-  cursor: pointer;
-}
-
-.formTextarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.submitButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  background: var(--color-secondary);
-  color: white;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  @include focus-ring;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-}
 
 // --------------------------
 // SIDEBAR
-// --------------------------
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
 
 .reasonsCard,
 .hoursCard {

@@ -36,31 +36,6 @@ const CybersecurityHero = () => {
             </h2>
 
             {/* Stats Grid */}
-            {/* <div className={styles.statsGrid}>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>24/7</span>
-                <span className={styles.statLabel}>Monitoring</span>
-              </div>
-              <div className={styles.statItem}>
-                <Counter
-                  value={15}
-                  suffix=' min'
-                  step={2}
-                  className={styles.statNumber}
-                />
-                <span className={styles.statLabel}>Response Time</span>
-              </div>
-              <div className={styles.statItem}>
-                <Counter
-                  value={99.9}
-                  suffix='%'
-                  step={10}
-                  decimals={1}
-                  className={styles.statNumber}
-                />
-                <span className={styles.statLabel}>Threats Blocked</span>
-              </div>
-            </div> */}
 
             {/* CTA Buttons */}
             <div className={styles.ctaGroup}>

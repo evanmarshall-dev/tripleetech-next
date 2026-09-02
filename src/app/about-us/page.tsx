@@ -323,28 +323,6 @@ const CompanyPage = () => {
         </section>
 
         {/* Stats Section */}
-        {/* <section className={styles.stats} aria-label='Company statistics'>
-          <div className={styles.container}>
-            <div className={styles.statsGrid}>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>20+</span>
-                <span className={styles.statLabel}>Years of Experience</span>
-              </div>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>100+</span>
-                <span className={styles.statLabel}>Happy Clients</span>
-              </div>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>24/7</span>
-                <span className={styles.statLabel}>Support Available</span>
-              </div>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>100%</span>
-                <span className={styles.statLabel}>Client Focused</span>
-              </div>
-            </div>
-          </div>
-        </section> */}
 
         {/* Quick Links Section */}
         <section className={styles.quickLinks} aria-labelledby='links-heading'>

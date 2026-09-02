@@ -543,49 +543,6 @@
 
 // --------------------------
 // STATS SECTION
-// --------------------------
-.stats {
-  padding: 4rem 0;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  color: white;
-
-  @media (width >= 768px) {
-    padding: 5rem 0;
-  }
-}
-
-.statsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-
-  @media (width >= 768px) {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-  }
-}
-
-.statItem {
-  text-align: center;
-}
-
-.statNumber {
-  display: block;
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.statLabel {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  letter-spacing: 0.02em;
-}
 
 // --------------------------
 // QUICK LINKS SECTION
