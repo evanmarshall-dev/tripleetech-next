@@ -10,12 +10,11 @@ const CybersecurityHero = () => {
         <div className={styles.imageWrapper}>
           <Image
             src='/images/homepage-cybersecurity.jpg'
-            alt='Triple E Tech: Monochromatic map of the world.'
+            alt=''
             fill
             quality={90}
             sizes='100vw'
             className={styles.heroImage}
-            role='presentation'
           />
           {/* Dark overlay for better text contrast */}
           <div className={styles.overlay} aria-hidden='true' />
