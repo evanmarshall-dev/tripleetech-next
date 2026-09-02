@@ -57,12 +57,21 @@ const businessJsonLd = {
     },
     geoRadius: '100000',
   },
-  serviceType: [
-    'Managed IT Services',
-    'Cybersecurity',
-    'IT Consulting',
-    'Network Support',
-  ],
+  // serviceType is a Service property, not a LocalBusiness one. hasOfferCatalog
+  // is how an Organization declares what it offers.
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'IT Services',
+    itemListElement: [
+      'Managed IT Services',
+      'Cybersecurity',
+      'IT Consulting',
+      'Network Support',
+    ].map((service) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: service },
+    })),
+  },
 };
 
 export function BusinessJsonLd() {
