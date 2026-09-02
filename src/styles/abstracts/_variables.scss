@@ -52,9 +52,9 @@ $gray-950: #030712;
 $white: #ffffff;
 $black: #000000;
 
-// Mid stop of the dark-theme hero gradient, between two $gray-900 ends.
-// Used by every page hero; see the hero-gradient blocks in the page modules.
-$hero-gradient-mid-dark: #0d2d44;
+// Brand navy. Darker companion to $light-primary, used as the mid stop of the
+// dark-theme hero gradient. Named for what it is, not where it is used.
+$brand-navy: #0d2d44;
 
 // - Light Mode Colors
 // -----------------------------
