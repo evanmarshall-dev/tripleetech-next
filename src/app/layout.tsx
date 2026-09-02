@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { inter } from './fonts';
 import Widget from '@/components/Widget/Widget';
-import { SITE_NAME, SITE_URL } from '@/lib/metadata';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { GA_MEASUREMENT_ID, SITE_NAME, SITE_URL } from '@/lib/metadata';
 import '@/styles/globals.scss';
 
 export const metadata: Metadata = {
@@ -48,6 +49,7 @@ export default function RootLayout({
       <body className={`${inter.variable}`}>
         {children}
         <Widget />
+        <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
       </body>
     </html>
   );

@@ -3,6 +3,9 @@ import type { Metadata } from 'next';
 export const SITE_NAME = 'Triple E Technology Solutions';
 export const SITE_URL = 'https://www.tripleetech.ca';
 
+/** GA4 measurement ID. Public by design - it ships in the page source. */
+export const GA_MEASUREMENT_ID = 'G-5TVNJ02TCM';
+
 type BuildMetadataArgs = {
   title: string;
   description: string;
