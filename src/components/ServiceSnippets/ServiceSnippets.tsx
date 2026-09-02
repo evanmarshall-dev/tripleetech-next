@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './ServiceSnippets.module.scss';
 
 const ServiceSnippets = () => {
@@ -6,6 +7,7 @@ const ServiceSnippets = () => {
     {
       id: 1,
       title: 'Cybersecurity',
+      href: '/cybersecurity',
       description:
         "Cybersecurity doesn't have to be overwhelming. At the heart of every strong defense is a secure foundation—one that protects your data, prepares your team, and puts the right tools in...",
       image: '/images/homepage-service-card-cybersecurity.jpg',
@@ -13,6 +15,7 @@ const ServiceSnippets = () => {
     {
       id: 2,
       title: 'Consulting Services',
+      href: '/consulting-services',
       description:
         "At Triple E Technology Solutions, we don't just fix problems—we help you build the right tech foundation to grow, thrive, and innovate. We partner with businesses to deliver efficient, effective IT solutions tailored to your...",
       image: '/images/homepage-service-card-consulting.jpg',
@@ -20,6 +23,7 @@ const ServiceSnippets = () => {
     {
       id: 3,
       title: 'Managed Service Provider',
+      href: '/managed-service-provider',
       description:
         "At Triple E Technology Solutions, we believe great technology shouldn't just run your business—it should empower it. As your Managed Service Provider (MSP), we take the stress out of...",
       image: '/images/homepage-service-card-msp.jpg',
@@ -59,10 +63,13 @@ const ServiceSnippets = () => {
                 <p className={styles.serviceSnippetsDescription}>
                   {item.description}
                 </p>
-                {/* TODO: Add a link to the service/support detail page once created. */}
-                <a href='#' className={styles.readMore}>
+                <Link
+                  href={item.href}
+                  className={styles.readMore}
+                  aria-label={`Read more about ${item.title}`}
+                >
                   Read More →
-                </a>
+                </Link>
               </div>
             </article>
           ))}
