@@ -92,20 +92,41 @@ Theme switching keys off `:root[style*='color-scheme: dark']`, set by the
 Measured against the real token pairs (WCAG 2.1; normal text needs **4.5:1**,
 large text 3:1). The site's body copy is mostly 14px, which is _normal_ text.
 
-**The accent is not a text colour in light mode.**
+**A brand colour cannot be both text and fill.** This is the rule the whole
+palette turns on, and getting it wrong produced 106 contrast failures.
 
-| Pair                                  | Ratio    |                                           |
-| ------------------------------------- | -------- | ----------------------------------------- |
-| accent `#2ecfd8` on card `#d1d5db`    | **1.29** | fails badly — effectively invisible       |
-| accent `#2ecfd8` on page `#f1f1f1`    | **1.69** | fails badly                               |
-| accent `#2ecfd8` on `$gray-900`       | 9.32     | fine — this is why it works in the footer |
-| secondary `#0082c9` on page `#f1f1f1` | 3.69     | large text only                           |
-| secondary `#0082c9` on card `#d1d5db` | 2.83     | fails                                     |
-| primary `#104e73` on page `#f1f1f1`   | 7.88     | safe                                      |
+The brand blues _lighten_ in dark mode so they can be read as text on a dark
+page — which is correct, and which is exactly what makes them unusable as
+fills there. On dark `--color-primary` (`#2685c3`) white measures 4.01:1 and
+navy 3.54:1: **there is no readable text colour for it.**
 
-So: **accent and secondary are safe as text only on dark surfaces.** On light
-surfaces use `--color-primary` or `--color-foreground`. Accent is for borders,
-rules and fills, where contrast minimums do not apply the same way.
+So the pairing is named rather than assumed. Use these, never a raw `white`:
+
+| Token                                        | Meaning                                                                                                    |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `--color-on-secondary` / `--color-on-accent` | Text sitting **on** a brand fill. White in light, navy in dark.                                            |
+| `--color-primary-fill`                       | A fill that does **not** flip with the theme — bands, solid buttons. White on it is 8.90:1 in both themes. |
+| `--color-on-primary-fill`                    | Its text colour.                                                                                           |
+| `--color-emphasis`                           | Emphasised text **on** a surface. Darkens in light, lightens in dark — the opposite of a fill.             |
+
+Measured pairs worth remembering:
+
+| Pair                                     | Ratio    |                                           |
+| ---------------------------------------- | -------- | ----------------------------------------- |
+| accent `#2ecfd8` on card `#d1d5db`       | **1.29** | fails badly — effectively invisible       |
+| accent `#2ecfd8` on page `#f1f1f1`       | **1.69** | fails badly                               |
+| accent `#2ecfd8` on `$gray-900`          | 9.32     | fine — this is why it works in the footer |
+| secondary `#0d6ba3` on page `#f1f1f1`    | 5.10     | safe                                      |
+| primary `#104e73` on page `#f1f1f1`      | 7.88     | safe                                      |
+| primary `#2685c3` on dark card `#1f2937` | 3.65     | fails — use `--color-emphasis` instead    |
+
+So: **the accent is never a text colour on a light surface.** It is for
+borders, rules and fills. On light surfaces use `--color-primary`,
+`--color-emphasis` or `--color-foreground`.
+
+`$light-secondary` was darkened from `#0082c9` to `#0d6ba3` for this reason: it
+was used both as text on white and as a button fill under white text, and
+measured 4.16:1 _both_ ways. It now clears 5.75:1 both ways at the same hue.
 
 **Dimming by opacity has a floor.** Foreground text at reduced opacity, measured:
 
@@ -123,9 +144,10 @@ near-black; light mode is the binding constraint, so check there first.
 
 ### Buttons
 
-White text needs a dark enough fill. `white on #104e73` is 8.90 — safe.
-`white on #0082c9` is 4.17 and `white on #2ecfd8` is 1.90 — **do not put white
-text on secondary or accent fills.**
+Use `--color-primary-fill` with `--color-on-primary-fill`, or a brand fill with
+its matching `--color-on-*` token. Never hardcode `color: white` on a fill: it
+is correct in light mode and fails in dark, which is how the badge shipped at
+1.90:1 in light and 1.68:1 in dark on six pages.
 
 ---
 
