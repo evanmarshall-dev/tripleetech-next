@@ -18,7 +18,7 @@
 
 .utilityBar {
   background: var(--color-primary);
-  color: #ffffff;
+  color: $white;
   padding: 0.5rem 1rem;
 
   @media (width >= 768px) {
@@ -403,7 +403,7 @@
 
   &:hover {
     background: var(--color-primary);
-    color: #ffffff;
+    color: $white;
   }
 
   @include focus-ring;

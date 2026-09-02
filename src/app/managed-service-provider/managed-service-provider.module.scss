@@ -16,7 +16,7 @@
   background: linear-gradient(
     135deg,
     $gray-900 0%,
-    #0d2d44 50%,
+    $hero-gradient-mid-dark 50%,
     $gray-900 100%
   );
   overflow: hidden;
@@ -46,7 +46,7 @@
   background: linear-gradient(
     135deg,
     $gray-900 0%,
-    #0d2d44 50%,
+    $hero-gradient-mid-dark 50%,
     $gray-900 100%
   );
 }

@@ -165,7 +165,7 @@
 
 // Dark mode adjustments for bottom footer
 :global(:root[style*='color-scheme: dark']) .bottomFooter {
-  background: #000;
+  background: $black;
   border-top-color: $gray-900;
 }
 

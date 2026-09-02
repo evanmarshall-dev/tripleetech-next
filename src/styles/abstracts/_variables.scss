@@ -49,6 +49,12 @@ $gray-700: #374151;
 $gray-800: #1f2937;
 $gray-900: #111827;
 $gray-950: #030712;
+$white: #ffffff;
+$black: #000000;
+
+// Mid stop of the dark-theme hero gradient, between two $gray-900 ends.
+// Used by every page hero; see the hero-gradient blocks in the page modules.
+$hero-gradient-mid-dark: #0d2d44;
 
 // - Light Mode Colors
 // -----------------------------

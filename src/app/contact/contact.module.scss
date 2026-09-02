@@ -16,7 +16,7 @@
   background: linear-gradient(
     135deg,
     $gray-900 0%,
-    #0d2d44 50%,
+    $hero-gradient-mid-dark 50%,
     $gray-900 100%
   );
   overflow: hidden;
@@ -47,7 +47,7 @@
   background: linear-gradient(
     135deg,
     $gray-900 0%,
-    #0d2d44 50%,
+    $hero-gradient-mid-dark 50%,
     $gray-900 100%
   );
 }
@@ -750,17 +750,4 @@
       transform: none;
     }
   }
-}
-
-// Visually hidden utility (for screen readers)
-:global(.visually-hidden) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
