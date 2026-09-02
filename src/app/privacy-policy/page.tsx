@@ -119,6 +119,30 @@ const PrivacyPolicy = () => {
               browser settings. Essential cookies are required for the website
               to function properly.
             </p>
+            <p>
+              We use Google Analytics to understand how visitors find and use
+              our site. It sets cookies that collect information such as the
+              pages you visit, how long you stay, your approximate location, and
+              the browser and device you use. This information is processed by
+              Google on our behalf and is not used to identify you personally.
+              You can read how Google handles this data in the{' '}
+              <a
+                href='https://policies.google.com/privacy'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Google Privacy Policy
+              </a>
+              , and you can opt out entirely using the{' '}
+              <a
+                href='https://tools.google.com/dlpage/gaoptout'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Google Analytics Opt-out Browser Add-on
+              </a>
+              .
+            </p>
           </section>
 
           <section className={styles.section}>
