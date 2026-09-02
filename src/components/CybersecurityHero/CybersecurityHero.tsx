@@ -4,7 +4,10 @@ import styles from '@/components/CybersecurityHero/CybersecurityHero.module.scss
 
 const CybersecurityHero = () => {
   return (
-    <section className={styles.hero} aria-label='Hero section'>
+    <section
+      className={styles.hero}
+      aria-labelledby='cybersecurity-hero-heading'
+    >
       <div className={styles.heroContent}>
         {/* Background Image with Next.js Optimization */}
         <div className={styles.imageWrapper}>
@@ -29,7 +32,7 @@ const CybersecurityHero = () => {
             </p>
 
             {/* Main Heading */}
-            <h2 className={styles.heading}>
+            <h2 id='cybersecurity-hero-heading' className={styles.heading}>
               With Triple E, cybersecurity isn&apos;t just a service, it&apos;s
               a partnership.
             </h2>
