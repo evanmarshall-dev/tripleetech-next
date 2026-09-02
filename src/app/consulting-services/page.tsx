@@ -4,6 +4,8 @@ import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './consulting-services.module.scss';
 import { buildMetadata } from '@/lib/metadata';
+import { BreadcrumbJsonLd } from '@/lib/breadcrumbs';
+import { ServiceJsonLd } from '@/lib/service';
 
 export const metadata = buildMetadata({
   title: 'IT Consulting Services',
@@ -65,6 +67,17 @@ const ConsultingServicesPage = () => {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'IT Consulting Services', path: '/consulting-services' },
+        ]}
+      />
+      <ServiceJsonLd
+        name='IT Consulting Services'
+        description='Strategic IT consulting that aligns technology with your business goals. Expert guidance and practical solutions for businesses in the Annapolis Valley.'
+        path='/consulting-services'
+        serviceType='IT Consulting'
+      />
       <NavBar />
       <main className={styles.consultingPage}>
         {/* Hero Section */}

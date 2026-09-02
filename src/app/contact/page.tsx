@@ -3,6 +3,7 @@ import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './contact.module.scss';
 import { buildMetadata } from '@/lib/metadata';
+import { BreadcrumbJsonLd } from '@/lib/breadcrumbs';
 import { BusinessJsonLd } from '@/lib/business';
 
 export const metadata = buildMetadata({
@@ -111,6 +112,7 @@ const ContactPage = () => {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: 'Contact Us', path: '/contact' }]} />
       <BusinessJsonLd />
 
       <NavBar />

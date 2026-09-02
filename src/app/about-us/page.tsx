@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './company.module.scss';
 import { buildMetadata } from '@/lib/metadata';
+import { BreadcrumbJsonLd } from '@/lib/breadcrumbs';
 
 export const metadata = buildMetadata({
   title: 'About Us',
@@ -86,6 +87,7 @@ const CompanyPage = () => {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: 'About Us', path: '/about-us' }]} />
       <NavBar />
       <main className={styles.companyPage}>
         {/* Hero Section */}

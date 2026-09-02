@@ -1,6 +1,7 @@
 import NavBar from '@/components/NavBar/NavBar';
 import styles from './legal.module.scss';
 import { buildMetadata } from '@/lib/metadata';
+import { BreadcrumbJsonLd } from '@/lib/breadcrumbs';
 
 export const metadata = buildMetadata({
   title: 'Privacy Policy',
@@ -12,6 +13,9 @@ export const metadata = buildMetadata({
 const PrivacyPolicy = () => {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[{ name: 'Privacy Policy', path: '/privacy-policy' }]}
+      />
       <NavBar />
       <main className={styles.legalPage}>
         <div className={styles.container}>

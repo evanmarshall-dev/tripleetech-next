@@ -4,6 +4,8 @@ import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './managed-service-provider.module.scss';
 import { buildMetadata } from '@/lib/metadata';
+import { BreadcrumbJsonLd } from '@/lib/breadcrumbs';
+import { ServiceJsonLd } from '@/lib/service';
 
 export const metadata = buildMetadata({
   title: 'Managed Service Provider',
@@ -72,6 +74,20 @@ const ManagedServiceProviderPage = () => {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          {
+            name: 'Managed Service Provider',
+            path: '/managed-service-provider',
+          },
+        ]}
+      />
+      <ServiceJsonLd
+        name='Managed IT Services'
+        description='Your trusted Managed Service Provider in the Annapolis Valley. Proactive IT management, 24/7 monitoring, and support for growing businesses.'
+        path='/managed-service-provider'
+        serviceType='Managed IT Services'
+      />
       <NavBar />
       <main className={styles.mspPage}>
         {/* Hero Section */}

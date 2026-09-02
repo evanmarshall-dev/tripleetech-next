@@ -1,6 +1,7 @@
 import NavBar from '@/components/NavBar/NavBar';
 import styles from './legal.module.scss';
 import { buildMetadata } from '@/lib/metadata';
+import { BreadcrumbJsonLd } from '@/lib/breadcrumbs';
 
 export const metadata = buildMetadata({
   title: 'Terms of Service',
@@ -12,6 +13,9 @@ export const metadata = buildMetadata({
 const TermsOfService = () => {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[{ name: 'Terms of Service', path: '/terms-of-service' }]}
+      />
       <NavBar />
       <main className={styles.legalPage}>
         <div className={styles.container}>

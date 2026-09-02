@@ -4,6 +4,8 @@ import NavBar from '@/components/NavBar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import styles from './cybersecurity.module.scss';
 import { buildMetadata } from '@/lib/metadata';
+import { BreadcrumbJsonLd } from '@/lib/breadcrumbs';
+import { ServiceJsonLd } from '@/lib/service';
 
 export const metadata = buildMetadata({
   title: 'Cybersecurity Solutions',
@@ -75,6 +77,15 @@ const CybersecurityPage = () => {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[{ name: 'Cybersecurity Solutions', path: '/cybersecurity' }]}
+      />
+      <ServiceJsonLd
+        name='Cybersecurity Solutions'
+        description='Enterprise-level cybersecurity without the complexity. Threat detection, 24/7 monitoring, and rapid response for businesses in the Annapolis Valley.'
+        path='/cybersecurity'
+        serviceType='Cybersecurity'
+      />
       <NavBar />
       <main className={styles.cybersecurityPage}>
         {/* Hero Section */}
