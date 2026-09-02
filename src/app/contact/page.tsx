@@ -4,6 +4,7 @@ import Footer from '@/components/Footer/Footer';
 import styles from './contact.module.scss';
 import { buildMetadata } from '@/lib/metadata';
 import { BreadcrumbJsonLd } from '@/lib/breadcrumbs';
+import { BUSINESS } from '@/lib/business';
 import { BusinessJsonLd } from '@/lib/business';
 
 export const metadata = buildMetadata({
@@ -25,8 +26,8 @@ const ContactPage = () => {
   const contactMethods = [
     {
       title: 'Phone',
-      value: '902-365-7333',
-      href: 'tel:+19023657333',
+      value: BUSINESS.phone.display,
+      href: BUSINESS.phone.href,
       icon: (
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -41,12 +42,12 @@ const ContactPage = () => {
           <path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z' />
         </svg>
       ),
-      description: 'Mon-Thu 8am-4:30pm, Fri 8am-4pm',
+      description: BUSINESS.hours.display,
     },
     {
       title: 'Email',
-      value: 'help@tripleetech.ca',
-      href: 'mailto:help@tripleetech.ca',
+      value: BUSINESS.email,
+      href: `mailto:${BUSINESS.email}`,
       icon: (
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -66,8 +67,8 @@ const ContactPage = () => {
     },
     {
       title: 'Visit Us',
-      value: '535 Main Street, Kentville',
-      href: 'https://maps.app.goo.gl/oD8KfVuueDWAqTjt7',
+      value: `${BUSINESS.address.street}, ${BUSINESS.address.locality}`,
+      href: BUSINESS.mapUrl,
       icon: (
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -83,7 +84,7 @@ const ContactPage = () => {
           <circle cx='12' cy='10' r='3' />
         </svg>
       ),
-      description: 'Nova Scotia, Canada B4N 1L4',
+      description: `${BUSINESS.address.regionLong}, ${BUSINESS.address.countryLong} ${BUSINESS.address.postalCode}`,
     },
   ];
 
@@ -435,16 +436,16 @@ const ContactPage = () => {
             </div>
             <div className={styles.mapAddress}>
               <address>
-                <strong>Triple E Technology Solutions</strong>
+                <strong>{BUSINESS.name}</strong>
                 <br />
-                535 Main Street
+                {BUSINESS.address.street}
                 <br />
-                Kentville, Nova Scotia
+                {BUSINESS.address.locality}, {BUSINESS.address.regionLong}
                 <br />
-                Canada, B4N 1L4
+                {BUSINESS.address.countryLong}, {BUSINESS.address.postalCode}
               </address>
               <a
-                href='https://maps.app.goo.gl/oD8KfVuueDWAqTjt7'
+                href={BUSINESS.mapUrl}
                 target='_blank'
                 rel='noopener noreferrer'
                 className={styles.directionsLink}
@@ -479,8 +480,8 @@ const ContactPage = () => {
               and let&apos;s discuss how we can help your business.
             </p>
             <div className={styles.ctaButtons}>
-              <a href='tel:+19023657333' className={styles.ctaPrimary}>
-                Call +1 (902) 365-7333
+              <a href={BUSINESS.phone.href} className={styles.ctaPrimary}>
+                Call {BUSINESS.phone.display}
               </a>
               <Link href='/about-us' className={styles.ctaSecondary}>
                 Learn About Us

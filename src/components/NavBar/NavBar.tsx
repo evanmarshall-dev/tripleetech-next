@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './NavBar.module.scss';
+import { BUSINESS } from '@/lib/business';
 
 interface NavItem {
   label: string;
@@ -127,7 +128,7 @@ const NavBar = () => {
             </svg>
             Remote Help
           </a>
-          <a href='mailto:help@tripleetech.ca' className={styles.utilityButton}>
+          <a href={`mailto:${BUSINESS.email}`} className={styles.utilityButton}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.scss';
+import { BUSINESS } from '@/lib/business';
 
 // Navigation structure for the footer
 const footerNavigation = {
@@ -28,7 +29,7 @@ const footerNavigation = {
         label: 'Remote Help',
         href: 'https://tripleesupport.screenconnect.com/',
       },
-      { label: 'Submit Ticket', href: 'mailto:help@tripleetech.ca' },
+      { label: 'Submit Ticket', href: `mailto:${BUSINESS.email}` },
     ],
   },
   company: {
@@ -127,22 +128,23 @@ const Footer = () => {
                   <strong>Address:</strong>
                   <br />
                   <a
-                    href='https://maps.app.goo.gl/LFzgK3LUeMkzHtUj8'
+                    href={BUSINESS.mapUrl}
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    535 Main Street
+                    {BUSINESS.address.street}
                     <br />
-                    Kentville, NS B4N 1L4
+                    {BUSINESS.address.locality}, {BUSINESS.address.region}{' '}
+                    {BUSINESS.address.postalCode}
                   </a>
                 </p>
                 <p className={styles.contactItem}>
                   <strong>Email:</strong>{' '}
-                  <a href='mailto:help@tripleetech.ca'>help@tripleetech.ca</a>
+                  <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
                 </p>
                 <p className={styles.contactItem}>
                   <strong>Phone:</strong>{' '}
-                  <a href='tel:+1-902-365-7333'>(902) 365-7333</a>
+                  <a href={BUSINESS.phone.href}>{BUSINESS.phone.display}</a>
                 </p>
               </address>
 
