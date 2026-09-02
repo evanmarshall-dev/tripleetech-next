@@ -32,10 +32,10 @@ const CybersecurityHero = () => {
             </p>
 
             {/* Main Heading */}
-            <h1 className={styles.heading}>
+            <h2 className={styles.heading}>
               With Triple E, cybersecurity isn&apos;t just a service, it&apos;s
               a partnership.
-            </h1>
+            </h2>
 
             {/* Stats Grid */}
             {/* <div className={styles.statsGrid}>
