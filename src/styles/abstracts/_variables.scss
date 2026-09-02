@@ -59,7 +59,10 @@ $brand-navy: #0d2d44;
 // - Light Mode Colors
 // -----------------------------
 $light-primary: #104e73;
-$light-secondary: #0082c9;
+// Darkened from #0082c9. It is used both as text on light surfaces and as a
+// button fill under white text; at #0082c9 both directions measured 4.16:1 and
+// failed WCAG AA. #0d6ba3 clears both at 5.75:1 without changing the hue.
+$light-secondary: #0d6ba3;
 $light-accent: #2ecfd8;
 $light-success: #0e8b4f;
 $light-success-bg: #e6f7ef;

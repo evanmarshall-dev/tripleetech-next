@@ -144,7 +144,7 @@
 
   &:hover {
     background: var(--color-secondary);
-    color: white;
+    color: var(--color-on-secondary);
     transform: translateY(-2px);
   }
 
@@ -227,7 +227,8 @@
 
 .craftedBy {
   font-size: 0.75rem !important;
-  color: $gray-500;
+  // $gray-500 measured 4.16:1 on the near-black bottom bar at 12px.
+  color: $gray-400;
 
   a {
     color: var(--color-accent);

@@ -31,7 +31,8 @@
 .lastUpdated {
   font-size: 0.875rem;
   color: var(--color-foreground);
-  opacity: 0.6;
+  // 0.6 measured 4.46:1 in light mode, just under AA. 0.7 is the floor.
+  opacity: 0.7;
   margin: 0 0 3rem 0;
 }
 

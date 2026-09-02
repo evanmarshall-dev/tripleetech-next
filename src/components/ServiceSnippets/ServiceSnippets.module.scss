@@ -26,7 +26,7 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--color-accent);
-  color: white;
+  color: var(--color-on-accent);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -124,7 +124,7 @@
   display: inline-block;
   padding: 0.375rem 0.875rem;
   background: var(--color-accent);
-  color: white;
+  color: var(--color-on-accent);
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -166,7 +166,7 @@
 .readMore {
   display: inline-flex;
   align-items: center;
-  color: var(--color-primary);
+  color: var(--color-emphasis);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9375rem;

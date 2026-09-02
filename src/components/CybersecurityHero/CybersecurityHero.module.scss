@@ -113,7 +113,7 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--color-accent);
-  color: white;
+  color: var(--color-on-accent);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -176,7 +176,7 @@
 
 .primaryCta {
   background: var(--color-secondary);
-  color: white;
+  color: var(--color-on-secondary);
   border: 2px solid transparent;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 

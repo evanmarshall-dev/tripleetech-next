@@ -17,8 +17,11 @@
 }
 
 .utilityBar {
-  background: var(--color-primary);
-  color: $white;
+  // A fixed brand band, so it uses the theme-independent fill token rather
+  // than var(--color-primary), which lightens in dark mode and dropped white
+  // text to 4.02:1. White on this fill is 8.90:1 in both themes.
+  background: var(--color-primary-fill);
+  color: var(--color-on-primary-fill);
   padding: 0.5rem 1rem;
 
   @media (width >= 768px) {

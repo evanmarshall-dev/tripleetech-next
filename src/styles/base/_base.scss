@@ -19,6 +19,24 @@
   --color-hover-bg: #{$light-hover-bg};
   --color-active-bg: #{$light-active-bg};
   --color-card-bg: #{$light-card-bg};
+
+  // Text colour to use ON a filled brand surface. The brand blues invert in
+  // dark mode (they get lighter, so they read as text on a dark page), which
+  // means white text on them fails contrast there. Naming the pairing lets each
+  // theme choose the readable partner instead of assuming white.
+  --color-on-secondary: #{$white};
+  --color-on-accent: #{$brand-navy};
+
+  // A filled brand surface that does NOT flip with the theme. --color-primary
+  // is a light blue in dark mode so it reads as text there, but that makes it
+  // unusable as a fill: neither white (4.01:1) nor navy (3.54:1) is readable on
+  // it. Bands and solid buttons keep one dark fill in both themes instead.
+  --color-primary-fill: #{$light-primary};
+  --color-on-primary-fill: #{$white};
+
+  // Emphasised text sitting ON a card or page surface. Must darken in light
+  // mode and lighten in dark mode - the opposite of a fill.
+  --color-emphasis: #{$light-primary};
 }
 
 :root[style*='color-scheme: dark'] {
@@ -33,6 +51,12 @@
   --color-input-border: #{$dark-input-border};
   --color-hover-bg: #{$dark-hover-bg};
   --color-card-bg: #{$dark-card-bg};
+
+  // Dark theme: the brand fills are light, so they take dark text.
+  --color-on-secondary: #{$brand-navy};
+  --color-on-accent: #{$brand-navy};
+  // --color-primary-fill deliberately not overridden: it is theme-independent.
+  --color-emphasis: #{$dark-accent};
 }
 
 html {
