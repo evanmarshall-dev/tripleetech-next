@@ -12,7 +12,8 @@ interface Partner {
   url: string;
 }
 
-// Sample partner data - replace with actual partner information
+// width/height are each logo's intrinsic pixel dimensions, so next/image has
+// the true aspect ratio. Do not substitute a uniform placeholder size.
 const partners: Partner[] = [
   {
     name: 'Fortinet Silver',

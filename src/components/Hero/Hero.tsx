@@ -43,7 +43,6 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons */}
-            {/* TODO: Make sure the corresponding pages/routes match the link once created. */}
             <div className={styles.ctaGroup}>
               <Link href='/contact' className={styles.primaryCta}>
                 Get Started
