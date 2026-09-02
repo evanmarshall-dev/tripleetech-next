@@ -12,7 +12,10 @@ import { SITE_NAME, SITE_URL } from '@/lib/metadata';
  * and inconsistent formatting weakens the match.
  */
 export const BUSINESS = {
+  /** Matches the Google Business Profile exactly; Google cross-references it. */
   name: SITE_NAME,
+  /** Registered entity name. Differs from the trading name shown on GBP. */
+  legalName: `${SITE_NAME} Incorporated`,
   email: 'help@tripleetech.ca',
   phone: {
     /** E.164, for tel: hrefs */
@@ -70,6 +73,7 @@ const businessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: BUSINESS.name,
+  legalName: BUSINESS.legalName,
   image: `${SITE_URL}/icons/logo-sm.svg`,
   '@id': `${SITE_URL}/#organization`,
   url: SITE_URL,
