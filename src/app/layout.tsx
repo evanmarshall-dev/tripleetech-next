@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
 import { inter } from './fonts';
 import Widget from '@/components/Widget/Widget';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from 'next/script';
 import { GA_MEASUREMENT_ID, SITE_NAME, SITE_URL } from '@/lib/metadata';
 import '@/styles/globals.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   // Google Search Console ownership proof for the www URL-prefix property.
-  // Must be server-rendered: the GA-based method fails because
-  // @next/third-parties injects gtag after hydration, so the verifier
-  // (which does not run JavaScript) never sees it.
+  // Must be server-rendered: the GA-based method fails because gtag is
+  // injected by client-side script after load, so the verifier (which does
+  // not run JavaScript) never sees it.
   verification: { google: 'OYc2NkwFuBF4pwMrR6MnLE7OPjoWbOa9omaQdnQ3JZw' },
   title: {
     template: '%s | Triple E Technology Solutions',
@@ -57,7 +57,27 @@ export default function RootLayout({
         </a>
         {children}
         <Widget />
-        <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+        {/*
+          GA4 loaded at lazyOnload rather than through @next/third-parties,
+          which defaults to afterInteractive. gtag.js is 169 KB - the largest
+          single resource on the page, bigger than every image and all
+          first-party JS combined - and at afterInteractive it competes with
+          the hero image for bandwidth during LCP. lazyOnload defers it until
+          after the window load event, so it no longer contends.
+
+          Trade-off: the pageview fires a few seconds later, so a visitor who
+          leaves almost immediately may not be counted.
+        */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy='lazyOnload'
+        />
+        <Script id='ga-init' strategy='lazyOnload'>
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');`}
+        </Script>
       </body>
     </html>
   );

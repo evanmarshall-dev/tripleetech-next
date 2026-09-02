@@ -13,6 +13,10 @@ const Hero = () => {
             alt=''
             fill
             priority
+            // `priority` emits the <link rel=preload> but not fetchpriority on
+            // the <img> itself in Next 16, and Lighthouse's LCP request
+            // discovery audit checks for the attribute. This is the LCP element.
+            fetchPriority='high'
             quality={90}
             sizes='100vw'
             className={styles.heroImage}
