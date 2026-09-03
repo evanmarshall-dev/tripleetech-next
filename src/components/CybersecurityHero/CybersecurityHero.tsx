@@ -15,7 +15,9 @@ const CybersecurityHero = () => {
             src='/images/homepage-cybersecurity.jpg'
             alt=''
             fill
-            quality={90}
+            // Below the fold, lazy-loaded, and sitting under a dark overlay:
+            // quality 90 cost 91KB against 58KB at 75 for no visible gain.
+            quality={75}
             sizes='100vw'
             className={styles.heroImage}
           />
