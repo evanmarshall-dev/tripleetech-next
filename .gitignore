@@ -45,3 +45,6 @@ next-env.d.ts
 .vscode/*
 !.vscode/settings.json
 
+
+# Playwright MCP writes page snapshots here on every navigation
+.playwright-mcp/
